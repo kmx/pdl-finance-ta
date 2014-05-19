@@ -30,4 +30,7 @@ poznamky*
 ^tmp
 \.c$
 ^PDL-*
-Makefile
+Makefile$
+Talib\.pm$
+Talib\.xs$
+

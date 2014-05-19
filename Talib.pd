@@ -81,23 +81,16 @@ pp_addhdr << 'MARKER';
 MARKER
 
 sub _finalize {
-
-
   my $rv = "\n";
   for my $name (@_) {
     $rv .= <<"END";
-          //\$PDL($name)->dims[0] = nbelem;
-          //warn("XXX sum=\%d, begidx=\%d, nbelem=\%d s=\%d", begidx+nbelem, begidx, nbelem, s);
-          Move(\$P($name), \$P($name)+begidx, s, double);
-          //memmove(\$P($name)+begidx, \$P($name), nbelem*sizeof(double));
-          //memmove(\$P($name)+begidx, \$P($name), s*sizeof(double));
+          Move(\$P($name), \$P($name)+begidx, nbelem, double);
           for(i=0;i<begidx;i++) { \$SETBAD(\$$name(n=>i)); }
           \$PDLSTATESETBAD($name);
 END
   }
   return <<"END";
         if (begidx>0 && begidx+nbelem <= \$SIZE(n)) {
-          int s = nbelem;
           $rv;
         }
 END
@@ -106,37 +99,6 @@ END
 pp_add_boot(<<EOB);
     TA_Initialize();
 EOB
-
-
-pp_def('TA_MAXXX',
-    Pars => 'double x(n); int period(); int type(); double [o]y(n);',
-    GenericTypes => ['D'],
-    HandleBad => 1,
-    BadCode  => q{
-        warn("XXX: BadCode");
-    },
-    Code => q{
-        int nbelem, begidx, i;
-        warn("XXX: Code DEBUG");
-        TA_MA(0, $SIZE(n) - 1, $P(x), $period(), $type(), &begidx, &nbelem, $P(y));
-    } . _finalize("y"),
-    Doc => <<'END',
-Moving average
-
- $outReal = TA_MA($inReal, $optInTimePeriod, $optInMAType);
-
- # $inReal - 1D piddle
- # $optInTimePeriod [Number of period] - integer (optional)
- #     default: 30
- #     valid range: min=1 max=100000
- # $optInMAType [Type of Moving Average] - integer (optional)
- #     default: 0
- #     valid values: 0=SMA 1=EMA 2=WMA 3=DEMA 4=TEMA 5=TRIMA 6=KAMA 7=MAMA 8=T3
- # returns: $outReal - 1D piddle
-END
-);
-
-##########################################################
 
 pp_def('TA_BBANDS',
     # TA_RetCode TA_BBANDS( int startIdx, int endIdx, const double inReal[], int optInTimePeriod,double optInNbDevUp,double optInNbDevDn,TA_MAType optInMAType, int *outBegIdx, int *outNBElement, double outRealUpperBand[], double outRealMiddleBand[], double outRealLowerBand[] );

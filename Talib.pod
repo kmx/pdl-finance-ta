@@ -79,35 +79,6 @@ L<TA_AVGPRICE|/TA_AVGPRICE> (Average Price), L<TA_MEDPRICE|/TA_MEDPRICE> (Median
 
 =cut
 
-=head2 TA_MAXXX
-
-=for sig
-
-  Signature: (double x(n); int period(); int type(); double [o]y(n))
-
-Moving average
-
- $outReal = TA_MA($inReal, $optInTimePeriod, $optInMAType);
-
- # $inReal - 1D piddle
- # $optInTimePeriod [Number of period] - integer (optional)
- #     default: 30
- #     valid range: min=1 max=100000
- # $optInMAType [Type of Moving Average] - integer (optional)
- #     default: 0
- #     valid values: 0=SMA 1=EMA 2=WMA 3=DEMA 4=TEMA 5=TRIMA 6=KAMA 7=MAMA 8=T3
- # returns: $outReal - 1D piddle
-
-
-=for bad
-
-TA_MAXXX processes bad values.
-It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
-
-
-
-=cut
-
 =head2 TA_BBANDS
 
 =for sig
