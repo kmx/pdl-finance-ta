@@ -34,10 +34,27 @@ WriteMakefile(
   VERSION_FROM  => 'Talib.pd',
   AUTHOR        => 'KMX <kmx@cpan.org>',
   ABSTRACT      => 'PDL interface to ta-lib library',
-  PREREQ_PM          => { PDL => 2.006 },
-  CONFIGURE_REQUIRES => { PDL => 2.006 },
-  BUILD_REQUIRES     => { PDL => 2.006 },
-#  dist => { PREOP=> '$(PERL) "-MPDL::PP qw/PDL::Finance::Talib PDL::Finance::Talib Talib/" Talib.pd && perldoc -u Talib.pm > $(DISTVNAME)/Talib.pod' }
+  LICENSE       => 'perl',
+  PREREQ_PM     => {
+        'PDL' => 2.006,
+  },
+  BUILD_REQUIRES     => {
+        'PDL' => 2.006,
+        'Test::More' => 0,
+        'Test::Number::Delta' => 0,
+  },
+  CONFIGURE_REQUIRES => {
+        'PDL' => 2.006,
+  },
+  dist => { PREOP=> '$(PERL) "-MPDL::PP qw/PDL::Finance::Talib PDL::Finance::Talib Talib/" Talib.pd && perldoc -u Talib.pm > $(DISTVNAME)/Talib.pod' }
 );
 
-sub MY::postamble { pdlpp_postamble($package) }
+sub MY::postamble {
+        pdlpp_postamble($package) . <<'END'
+
+mypod:
+	$(PERL) "-MPDL::PP qw/PDL::Finance::Talib PDL::Finance::Talib Talib/" Talib.pd
+	perldoc -u Talib.pm > Talib.pod
+
+END
+}

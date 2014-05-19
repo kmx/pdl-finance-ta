@@ -72,6 +72,14 @@ L<TA_AVGPRICE|/TA_AVGPRICE> (Average Price), L<TA_MEDPRICE|/TA_MEDPRICE> (Median
 =cut
 END
 
+pp_addpm({At=>'Bot'},<<'END');
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+
+=cut
+END
+
 pp_addhdr << 'MARKER';
 #include <ta_libc.h>
 MARKER

@@ -22,6 +22,7 @@ poznamky*
 \.bak$
 \.zip$
 \.gz$
+\.old$
 ^MYMETA\.json$
 ^MYMETA\.yml$
 ^Build$
