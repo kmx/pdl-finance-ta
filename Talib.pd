@@ -1,4 +1,4 @@
-our $VERSION = "0.0001";
+our $VERSION = '0.001';
 pp_setversion($VERSION);
 
 pp_addpm({At=>'Top'},<<'END');
