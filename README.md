@@ -1,2 +1,2 @@
-pdl-finance-talib
-=================
+PDL::Finance::Talib perl module
+===============================
