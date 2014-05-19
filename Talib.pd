@@ -57,13 +57,9 @@ L<TA_HT_DCPERIOD|/TA_HT_DCPERIOD> (Hilbert Transform - Dominant Cycle Period), L
 
 L<TA_AD|/TA_AD> (Chaikin A/D Line), L<TA_ADOSC|/TA_ADOSC> (Chaikin A/D Oscillator), L<TA_OBV|/TA_OBV> (On Balance Volume)
 
-=begin comment
-
 =head2 Group: Pattern Recognition
 
 L<TA_CDL2CROWS|/TA_CDL2CROWS> (Two Crows), L<TA_CDL3BLACKCROWS|/TA_CDL3BLACKCROWS> (Three Black Crows), L<TA_CDL3INSIDE|/TA_CDL3INSIDE> (Three Inside Up/Down), L<TA_CDL3LINESTRIKE|/TA_CDL3LINESTRIKE> (Three-Line Strike ), L<TA_CDL3OUTSIDE|/TA_CDL3OUTSIDE> (Three Outside Up/Down), L<TA_CDL3STARSINSOUTH|/TA_CDL3STARSINSOUTH> (Three Stars In The South), L<TA_CDL3WHITESOLDIERS|/TA_CDL3WHITESOLDIERS> (Three Advancing White Soldiers), L<TA_CDLABANDONEDBABY|/TA_CDLABANDONEDBABY> (Abandoned Baby), L<TA_CDLADVANCEBLOCK|/TA_CDLADVANCEBLOCK> (Advance Block), L<TA_CDLBELTHOLD|/TA_CDLBELTHOLD> (Belt-hold), L<TA_CDLBREAKAWAY|/TA_CDLBREAKAWAY> (Breakaway), L<TA_CDLCLOSINGMARUBOZU|/TA_CDLCLOSINGMARUBOZU> (Closing Marubozu), L<TA_CDLCONCEALBABYSWALL|/TA_CDLCONCEALBABYSWALL> (Concealing Baby Swallow), L<TA_CDLCOUNTERATTACK|/TA_CDLCOUNTERATTACK> (Counterattack), L<TA_CDLDARKCLOUDCOVER|/TA_CDLDARKCLOUDCOVER> (Dark Cloud Cover), L<TA_CDLDOJI|/TA_CDLDOJI> (Doji), L<TA_CDLDOJISTAR|/TA_CDLDOJISTAR> (Doji Star), L<TA_CDLDRAGONFLYDOJI|/TA_CDLDRAGONFLYDOJI> (Dragonfly Doji), L<TA_CDLENGULFING|/TA_CDLENGULFING> (Engulfing Pattern), L<TA_CDLEVENINGDOJISTAR|/TA_CDLEVENINGDOJISTAR> (Evening Doji Star), L<TA_CDLEVENINGSTAR|/TA_CDLEVENINGSTAR> (Evening Star), L<TA_CDLGAPSIDESIDEWHITE|/TA_CDLGAPSIDESIDEWHITE> (Up/Down-gap side-by-side white lines), L<TA_CDLGRAVESTONEDOJI|/TA_CDLGRAVESTONEDOJI> (Gravestone Doji), L<TA_CDLHAMMER|/TA_CDLHAMMER> (Hammer), L<TA_CDLHANGINGMAN|/TA_CDLHANGINGMAN> (Hanging Man), L<TA_CDLHARAMI|/TA_CDLHARAMI> (Harami Pattern), L<TA_CDLHARAMICROSS|/TA_CDLHARAMICROSS> (Harami Cross Pattern), L<TA_CDLHIGHWAVE|/TA_CDLHIGHWAVE> (High-Wave Candle), L<TA_CDLHIKKAKE|/TA_CDLHIKKAKE> (Hikkake Pattern), L<TA_CDLHIKKAKEMOD|/TA_CDLHIKKAKEMOD> (Modified Hikkake Pattern), L<TA_CDLHOMINGPIGEON|/TA_CDLHOMINGPIGEON> (Homing Pigeon), L<TA_CDLIDENTICAL3CROWS|/TA_CDLIDENTICAL3CROWS> (Identical Three Crows), L<TA_CDLINNECK|/TA_CDLINNECK> (In-Neck Pattern), L<TA_CDLINVERTEDHAMMER|/TA_CDLINVERTEDHAMMER> (Inverted Hammer), L<TA_CDLKICKING|/TA_CDLKICKING> (Kicking), L<TA_CDLKICKINGBYLENGTH|/TA_CDLKICKINGBYLENGTH> (Kicking - bull/bear determined by the longer marubozu), L<TA_CDLLADDERBOTTOM|/TA_CDLLADDERBOTTOM> (Ladder Bottom), L<TA_CDLLONGLEGGEDDOJI|/TA_CDLLONGLEGGEDDOJI> (Long Legged Doji), L<TA_CDLLONGLINE|/TA_CDLLONGLINE> (Long Line Candle), L<TA_CDLMARUBOZU|/TA_CDLMARUBOZU> (Marubozu), L<TA_CDLMATCHINGLOW|/TA_CDLMATCHINGLOW> (Matching Low), L<TA_CDLMATHOLD|/TA_CDLMATHOLD> (Mat Hold), L<TA_CDLMORNINGDOJISTAR|/TA_CDLMORNINGDOJISTAR> (Morning Doji Star), L<TA_CDLMORNINGSTAR|/TA_CDLMORNINGSTAR> (Morning Star), L<TA_CDLONNECK|/TA_CDLONNECK> (On-Neck Pattern), L<TA_CDLPIERCING|/TA_CDLPIERCING> (Piercing Pattern), L<TA_CDLRICKSHAWMAN|/TA_CDLRICKSHAWMAN> (Rickshaw Man), L<TA_CDLRISEFALL3METHODS|/TA_CDLRISEFALL3METHODS> (Rising/Falling Three Methods), L<TA_CDLSEPARATINGLINES|/TA_CDLSEPARATINGLINES> (Separating Lines), L<TA_CDLSHOOTINGSTAR|/TA_CDLSHOOTINGSTAR> (Shooting Star), L<TA_CDLSHORTLINE|/TA_CDLSHORTLINE> (Short Line Candle), L<TA_CDLSPINNINGTOP|/TA_CDLSPINNINGTOP> (Spinning Top), L<TA_CDLSTALLEDPATTERN|/TA_CDLSTALLEDPATTERN> (Stalled Pattern), L<TA_CDLSTICKSANDWICH|/TA_CDLSTICKSANDWICH> (Stick Sandwich), L<TA_CDLTAKURI|/TA_CDLTAKURI> (Takuri (Dragonfly Doji with very long lower shadow)), L<TA_CDLTASUKIGAP|/TA_CDLTASUKIGAP> (Tasuki Gap), L<TA_CDLTHRUSTING|/TA_CDLTHRUSTING> (Thrusting Pattern), L<TA_CDLTRISTAR|/TA_CDLTRISTAR> (Tristar Pattern), L<TA_CDLUNIQUE3RIVER|/TA_CDLUNIQUE3RIVER> (Unique 3 River), L<TA_CDLUPSIDEGAP2CROWS|/TA_CDLUPSIDEGAP2CROWS> (Upside Gap Two Crows), L<TA_CDLXSIDEGAP3METHODS|/TA_CDLXSIDEGAP3METHODS> (Upside/Downside Gap Three Methods)
-
-=end comment
 
 =head2 Group: Statistic Functions
 
@@ -80,11 +76,27 @@ pp_addhdr << 'MARKER';
 #include <ta_libc.h>
 MARKER
 
-sub _finalize {
+sub _finalize_double {
   my $rv = "\n";
   for my $name (@_) {
     $rv .= <<"END";
           Move(\$P($name), \$P($name)+begidx, nbelem, double);
+          for(i=0;i<begidx;i++) { \$SETBAD(\$$name(n=>i)); }
+          \$PDLSTATESETBAD($name);
+END
+  }
+  return <<"END";
+        if (begidx>0 && begidx+nbelem <= \$SIZE(n)) {
+          $rv;
+        }
+END
+}
+
+sub _finalize_int {
+  my $rv = "\n";
+  for my $name (@_) {
+    $rv .= <<"END";
+          Move(\$P($name), \$P($name)+begidx, nbelem, int);
           for(i=0;i<begidx;i++) { \$SETBAD(\$$name(n=>i)); }
           \$PDLSTATESETBAD($name);
 END
@@ -108,7 +120,7 @@ pp_def('TA_BBANDS',
     Code => q{
         int begidx, nbelem, i;
         TA_BBANDS(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), $InNbDevUp(), $InNbDevDn(), $InMAType(), &begidx, &nbelem, $P(outpdlUpperBand), $P(outpdlMiddleBand), $P(outpdlLowerBand));
-    } . _finalize(qw/outpdlUpperBand outpdlMiddleBand outpdlLowerBand/),
+    } . _finalize_double(qw/outpdlUpperBand outpdlMiddleBand outpdlLowerBand/),
     Doc => <<'END',
 Bollinger Bands
 
@@ -141,7 +153,7 @@ pp_def('TA_DEMA',
     Code => q{
         int begidx, nbelem, i;
         TA_DEMA(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Double Exponential Moving Average
 
@@ -163,7 +175,7 @@ pp_def('TA_EMA',
     Code => q{
         int begidx, nbelem, i;
         TA_EMA(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Exponential Moving Average
 
@@ -185,7 +197,7 @@ pp_def('TA_HT_TRENDLINE',
     Code => q{
         int begidx, nbelem, i;
         TA_HT_TRENDLINE(0, $SIZE(n)-1, $P(inpdl), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Hilbert Transform - Instantaneous Trendline
 
@@ -204,7 +216,7 @@ pp_def('TA_KAMA',
     Code => q{
         int begidx, nbelem, i;
         TA_KAMA(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Kaufman Adaptive Moving Average
 
@@ -226,7 +238,7 @@ pp_def('TA_MA',
     Code => q{
         int begidx, nbelem, i;
         TA_MA(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Moving average
 
@@ -251,7 +263,7 @@ pp_def('TA_MAMA',
     Code => q{
         int begidx, nbelem, i;
         TA_MAMA(0, $SIZE(n)-1, $P(inpdl), $InFastLimit(), $InSlowLimit(), &begidx, &nbelem, $P(outMAMA), $P(outFAMA));
-    } . _finalize(qw/outMAMA outFAMA/),
+    } . _finalize_double(qw/outMAMA outFAMA/),
     Doc => <<'END',
 MESA Adaptive Moving Average
 
@@ -277,7 +289,7 @@ pp_def('TA_MAVP',
     Code => q{
         int begidx, nbelem, i;
         TA_MAVP(0, $SIZE(n)-1, $P(inpdl), $P(inPeriods), $InMinPeriod(), $InMaxPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Moving average with variable period
 
@@ -306,7 +318,7 @@ pp_def('TA_MIDPOINT',
     Code => q{
         int begidx, nbelem, i;
         TA_MIDPOINT(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 MidPoint over period
 
@@ -328,7 +340,7 @@ pp_def('TA_MIDPRICE',
     Code => q{
         int begidx, nbelem, i;
         TA_MIDPRICE(0, $SIZE(n)-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Midpoint Price over period
 
@@ -350,7 +362,7 @@ pp_def('TA_SAR',
     Code => q{
         int begidx, nbelem, i;
         TA_SAR(0, $SIZE(n)-1, $P(high), $P(low), $InAcceleration(), $InMaximum(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Parabolic SAR
 
@@ -375,7 +387,7 @@ pp_def('TA_SAREXT',
     Code => q{
         int begidx, nbelem, i;
         TA_SAREXT(0, $SIZE(n)-1, $P(high), $P(low), $InStartValue(), $InOffsetOnReverse(), $InAccelerationInitLong(), $InAccelerationLong(), $InAccelerationMaxLong(), $InAccelerationInitShort(), $InAccelerationShort(), $InAccelerationMaxShort(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Parabolic SAR - Extended
 
@@ -418,7 +430,7 @@ pp_def('TA_SMA',
     Code => q{
         int begidx, nbelem, i;
         TA_SMA(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Simple Moving Average
 
@@ -440,7 +452,7 @@ pp_def('TA_T3',
     Code => q{
         int begidx, nbelem, i;
         TA_T3(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), $InVFactor(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Triple Exponential Moving Average (T3)
 
@@ -465,7 +477,7 @@ pp_def('TA_TEMA',
     Code => q{
         int begidx, nbelem, i;
         TA_TEMA(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Triple Exponential Moving Average
 
@@ -487,7 +499,7 @@ pp_def('TA_TRIMA',
     Code => q{
         int begidx, nbelem, i;
         TA_TRIMA(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Triangular Moving Average
 
@@ -509,7 +521,7 @@ pp_def('TA_WMA',
     Code => q{
         int begidx, nbelem, i;
         TA_WMA(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Weighted Moving Average
 
@@ -531,7 +543,7 @@ pp_def('TA_ATR',
     Code => q{
         int begidx, nbelem, i;
         TA_ATR(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Average True Range
 
@@ -553,7 +565,7 @@ pp_def('TA_NATR',
     Code => q{
         int begidx, nbelem, i;
         TA_NATR(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Normalized Average True Range
 
@@ -575,7 +587,7 @@ pp_def('TA_TRANGE',
     Code => q{
         int begidx, nbelem, i;
         TA_TRANGE(0, $SIZE(n)-1, $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 True Range
 
@@ -594,7 +606,7 @@ pp_def('TA_ADX',
     Code => q{
         int begidx, nbelem, i;
         TA_ADX(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Average Directional Movement Index
 
@@ -616,7 +628,7 @@ pp_def('TA_ADXR',
     Code => q{
         int begidx, nbelem, i;
         TA_ADXR(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Average Directional Movement Index Rating
 
@@ -638,7 +650,7 @@ pp_def('TA_APO',
     Code => q{
         int begidx, nbelem, i;
         TA_APO(0, $SIZE(n)-1, $P(inpdl), $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Absolute Price Oscillator
 
@@ -666,7 +678,7 @@ pp_def('TA_AROON',
     Code => q{
         int begidx, nbelem, i;
         TA_AROON(0, $SIZE(n)-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outAroonDown), $P(outAroonUp));
-    } . _finalize(qw/outAroonDown outAroonUp/),
+    } . _finalize_double(qw/outAroonDown outAroonUp/),
     Doc => <<'END',
 Aroon
 
@@ -689,7 +701,7 @@ pp_def('TA_AROONOSC',
     Code => q{
         int begidx, nbelem, i;
         TA_AROONOSC(0, $SIZE(n)-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Aroon Oscillator
 
@@ -711,7 +723,7 @@ pp_def('TA_BOP',
     Code => q{
         int begidx, nbelem, i;
         TA_BOP(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Balance Of Power
 
@@ -730,7 +742,7 @@ pp_def('TA_CCI',
     Code => q{
         int begidx, nbelem, i;
         TA_CCI(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Commodity Channel Index
 
@@ -752,7 +764,7 @@ pp_def('TA_CMO',
     Code => q{
         int begidx, nbelem, i;
         TA_CMO(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Chande Momentum Oscillator
 
@@ -774,7 +786,7 @@ pp_def('TA_DX',
     Code => q{
         int begidx, nbelem, i;
         TA_DX(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Directional Movement Index
 
@@ -796,7 +808,7 @@ pp_def('TA_MACD',
     Code => q{
         int begidx, nbelem, i;
         TA_MACD(0, $SIZE(n)-1, $P(inpdl), $InFastPeriod(), $InSlowPeriod(), $InSignalPeriod(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
-    } . _finalize(qw/outMACD outMACDSignal outMACDHist/),
+    } . _finalize_double(qw/outMACD outMACDSignal outMACDHist/),
     Doc => <<'END',
 Moving Average Convergence/Divergence
 
@@ -826,7 +838,7 @@ pp_def('TA_MACDEXT',
     Code => q{
         int begidx, nbelem, i;
         TA_MACDEXT(0, $SIZE(n)-1, $P(inpdl), $InFastPeriod(), $InFastMAType(), $InSlowPeriod(), $InSlowMAType(), $InSignalPeriod(), $InSignalMAType(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
-    } . _finalize(qw/outMACD outMACDSignal outMACDHist/),
+    } . _finalize_double(qw/outMACD outMACDSignal outMACDHist/),
     Doc => <<'END',
 MACD with controllable MA type
 
@@ -865,7 +877,7 @@ pp_def('TA_MACDFIX',
     Code => q{
         int begidx, nbelem, i;
         TA_MACDFIX(0, $SIZE(n)-1, $P(inpdl), $InSignalPeriod(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
-    } . _finalize(qw/outMACD outMACDSignal outMACDHist/),
+    } . _finalize_double(qw/outMACD outMACDSignal outMACDHist/),
     Doc => <<'END',
 Moving Average Convergence/Divergence Fix 12/26
 
@@ -889,7 +901,7 @@ pp_def('TA_MFI',
     Code => q{
         int begidx, nbelem, i;
         TA_MFI(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $P(volume), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Money Flow Index
 
@@ -911,7 +923,7 @@ pp_def('TA_MINUS_DI',
     Code => q{
         int begidx, nbelem, i;
         TA_MINUS_DI(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Minus Directional Indicator
 
@@ -933,7 +945,7 @@ pp_def('TA_MINUS_DM',
     Code => q{
         int begidx, nbelem, i;
         TA_MINUS_DM(0, $SIZE(n)-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Minus Directional Movement
 
@@ -955,7 +967,7 @@ pp_def('TA_MOM',
     Code => q{
         int begidx, nbelem, i;
         TA_MOM(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Momentum
 
@@ -977,7 +989,7 @@ pp_def('TA_PLUS_DI',
     Code => q{
         int begidx, nbelem, i;
         TA_PLUS_DI(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Plus Directional Indicator
 
@@ -999,7 +1011,7 @@ pp_def('TA_PLUS_DM',
     Code => q{
         int begidx, nbelem, i;
         TA_PLUS_DM(0, $SIZE(n)-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Plus Directional Movement
 
@@ -1021,7 +1033,7 @@ pp_def('TA_PPO',
     Code => q{
         int begidx, nbelem, i;
         TA_PPO(0, $SIZE(n)-1, $P(inpdl), $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Percentage Price Oscillator
 
@@ -1049,7 +1061,7 @@ pp_def('TA_ROC',
     Code => q{
         int begidx, nbelem, i;
         TA_ROC(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Rate of change : ((price/prevPrice-1)*100)
 
@@ -1071,7 +1083,7 @@ pp_def('TA_ROCP',
     Code => q{
         int begidx, nbelem, i;
         TA_ROCP(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Rate of change Percentage: (price-prevPrice/prevPrice)
 
@@ -1093,7 +1105,7 @@ pp_def('TA_ROCR',
     Code => q{
         int begidx, nbelem, i;
         TA_ROCR(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Rate of change ratio: (price/prevPrice)
 
@@ -1115,7 +1127,7 @@ pp_def('TA_ROCR100',
     Code => q{
         int begidx, nbelem, i;
         TA_ROCR100(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Rate of change ratio 100 scale: (price/prevPrice*100)
 
@@ -1137,7 +1149,7 @@ pp_def('TA_RSI',
     Code => q{
         int begidx, nbelem, i;
         TA_RSI(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Relative Strength Index
 
@@ -1159,7 +1171,7 @@ pp_def('TA_STOCH',
     Code => q{
         int begidx, nbelem, i;
         TA_STOCH(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InFastK_Period(), $InSlowK_Period(), $InSlowK_MAType(), $InSlowD_Period(), $InSlowD_MAType(), &begidx, &nbelem, $P(outSlowK), $P(outSlowD));
-    } . _finalize(qw/outSlowK outSlowD/),
+    } . _finalize_double(qw/outSlowK outSlowD/),
     Doc => <<'END',
 Stochastic
 
@@ -1194,7 +1206,7 @@ pp_def('TA_STOCHF',
     Code => q{
         int begidx, nbelem, i;
         TA_STOCHF(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK), $P(outFastD));
-    } . _finalize(qw/outFastK outFastD/),
+    } . _finalize_double(qw/outFastK outFastD/),
     Doc => <<'END',
 Stochastic Fast
 
@@ -1223,7 +1235,7 @@ pp_def('TA_STOCHRSI',
     Code => q{
         int begidx, nbelem, i;
         TA_STOCHRSI(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK), $P(outFastD));
-    } . _finalize(qw/outFastK outFastD/),
+    } . _finalize_double(qw/outFastK outFastD/),
     Doc => <<'END',
 Stochastic Relative Strength Index
 
@@ -1255,7 +1267,7 @@ pp_def('TA_TRIX',
     Code => q{
         int begidx, nbelem, i;
         TA_TRIX(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 1-day Rate-Of-Change (ROC of a Triple Smooth EMA)
 
@@ -1277,7 +1289,7 @@ pp_def('TA_ULTOSC',
     Code => q{
         int begidx, nbelem, i;
         TA_ULTOSC(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod1(), $InTimePeriod2(), $InTimePeriod3(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Ultimate Oscillator
 
@@ -1305,7 +1317,7 @@ pp_def('TA_WILLR',
     Code => q{
         int begidx, nbelem, i;
         TA_WILLR(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Williams' %R
 
@@ -1327,7 +1339,7 @@ pp_def('TA_HT_DCPERIOD',
     Code => q{
         int begidx, nbelem, i;
         TA_HT_DCPERIOD(0, $SIZE(n)-1, $P(inpdl), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Hilbert Transform - Dominant Cycle Period
 
@@ -1346,7 +1358,7 @@ pp_def('TA_HT_DCPHASE',
     Code => q{
         int begidx, nbelem, i;
         TA_HT_DCPHASE(0, $SIZE(n)-1, $P(inpdl), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Hilbert Transform - Dominant Cycle Phase
 
@@ -1365,7 +1377,7 @@ pp_def('TA_HT_PHASOR',
     Code => q{
         int begidx, nbelem, i;
         TA_HT_PHASOR(0, $SIZE(n)-1, $P(inpdl), &begidx, &nbelem, $P(outInPhase), $P(outQuadrature));
-    } . _finalize(qw/outInPhase outQuadrature/),
+    } . _finalize_double(qw/outInPhase outQuadrature/),
     Doc => <<'END',
 Hilbert Transform - Phasor Components
 
@@ -1385,7 +1397,7 @@ pp_def('TA_HT_SINE',
     Code => q{
         int begidx, nbelem, i;
         TA_HT_SINE(0, $SIZE(n)-1, $P(inpdl), &begidx, &nbelem, $P(outSine), $P(outLeadSine));
-    } . _finalize(qw/outSine outLeadSine/),
+    } . _finalize_double(qw/outSine outLeadSine/),
     Doc => <<'END',
 Hilbert Transform - SineWave
 
@@ -1405,7 +1417,7 @@ pp_def('TA_HT_TRENDMODE',
     Code => q{
         int begidx, nbelem, i;
         TA_HT_TRENDMODE(0, $SIZE(n)-1, $P(inpdl), &begidx, &nbelem, $P(outInteger));
-    } . _finalize(qw/outInteger/),
+    } . _finalize_int(qw/outInteger/),
     Doc => <<'END',
 Hilbert Transform - Trend vs Cycle Mode
 
@@ -1424,7 +1436,7 @@ pp_def('TA_AD',
     Code => q{
         int begidx, nbelem, i;
         TA_AD(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $P(volume), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Chaikin A/D Line
 
@@ -1443,7 +1455,7 @@ pp_def('TA_ADOSC',
     Code => q{
         int begidx, nbelem, i;
         TA_ADOSC(0, $SIZE(n)-1, $P(high), $P(low), $P(close), $P(volume), $InFastPeriod(), $InSlowPeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Chaikin A/D Oscillator
 
@@ -1468,7 +1480,7 @@ pp_def('TA_OBV',
     Code => q{
         int begidx, nbelem, i;
         TA_OBV(0, $SIZE(n)-1, $P(inpdl), $P(volume), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 On Balance Volume
 
@@ -1480,1166 +1492,1166 @@ On Balance Volume
 END
 );
 
-###pp_def('TA_CDL2CROWS',
-###    # TA_RetCode TA_CDL2CROWS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDL2CROWS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Two Crows
-###
-###  $outInteger = TA_CDL2CROWS($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDL3BLACKCROWS',
-###    # TA_RetCode TA_CDL3BLACKCROWS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDL3BLACKCROWS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Three Black Crows
-###
-###  $outInteger = TA_CDL3BLACKCROWS($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDL3INSIDE',
-###    # TA_RetCode TA_CDL3INSIDE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDL3INSIDE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Three Inside Up/Down
-###
-###  $outInteger = TA_CDL3INSIDE($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDL3LINESTRIKE',
-###    # TA_RetCode TA_CDL3LINESTRIKE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDL3LINESTRIKE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Three-Line Strike
-###
-###  $outInteger = TA_CDL3LINESTRIKE($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDL3OUTSIDE',
-###    # TA_RetCode TA_CDL3OUTSIDE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDL3OUTSIDE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Three Outside Up/Down
-###
-###  $outInteger = TA_CDL3OUTSIDE($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDL3STARSINSOUTH',
-###    # TA_RetCode TA_CDL3STARSINSOUTH( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDL3STARSINSOUTH(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Three Stars In The South
-###
-###  $outInteger = TA_CDL3STARSINSOUTH($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDL3WHITESOLDIERS',
-###    # TA_RetCode TA_CDL3WHITESOLDIERS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDL3WHITESOLDIERS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Three Advancing White Soldiers
-###
-###  $outInteger = TA_CDL3WHITESOLDIERS($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLABANDONEDBABY',
-###    # TA_RetCode TA_CDLABANDONEDBABY( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLABANDONEDBABY(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Abandoned Baby
-###
-###  $outInteger = TA_CDLABANDONEDBABY($open, $high, $low, $close, $InPenetration);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # $InPenetration [Percentage of penetration of a candle within another candle] - real number
-### #     default: 0.3
-### #     valid range: min=0 max=3e+037
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLADVANCEBLOCK',
-###    # TA_RetCode TA_CDLADVANCEBLOCK( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLADVANCEBLOCK(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Advance Block
-###
-###  $outInteger = TA_CDLADVANCEBLOCK($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLBELTHOLD',
-###    # TA_RetCode TA_CDLBELTHOLD( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLBELTHOLD(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Belt-hold
-###
-###  $outInteger = TA_CDLBELTHOLD($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLBREAKAWAY',
-###    # TA_RetCode TA_CDLBREAKAWAY( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLBREAKAWAY(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Breakaway
-###
-###  $outInteger = TA_CDLBREAKAWAY($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLCLOSINGMARUBOZU',
-###    # TA_RetCode TA_CDLCLOSINGMARUBOZU( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLCLOSINGMARUBOZU(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Closing Marubozu
-###
-###  $outInteger = TA_CDLCLOSINGMARUBOZU($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLCONCEALBABYSWALL',
-###    # TA_RetCode TA_CDLCONCEALBABYSWALL( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLCONCEALBABYSWALL(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Concealing Baby Swallow
-###
-###  $outInteger = TA_CDLCONCEALBABYSWALL($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLCOUNTERATTACK',
-###    # TA_RetCode TA_CDLCOUNTERATTACK( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLCOUNTERATTACK(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Counterattack
-###
-###  $outInteger = TA_CDLCOUNTERATTACK($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLDARKCLOUDCOVER',
-###    # TA_RetCode TA_CDLDARKCLOUDCOVER( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLDARKCLOUDCOVER(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Dark Cloud Cover
-###
-###  $outInteger = TA_CDLDARKCLOUDCOVER($open, $high, $low, $close, $InPenetration);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # $InPenetration [Percentage of penetration of a candle within another candle] - real number
-### #     default: 0.5
-### #     valid range: min=0 max=3e+037
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLDOJI',
-###    # TA_RetCode TA_CDLDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLDOJI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Doji
-###
-###  $outInteger = TA_CDLDOJI($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLDOJISTAR',
-###    # TA_RetCode TA_CDLDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );STAR
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLDOJISTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Doji Star
-###
-###  $outInteger = TA_CDLDOJISTAR($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLDRAGONFLYDOJI',
-###    # TA_RetCode TA_CDLDRAGONFLYDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLDRAGONFLYDOJI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Dragonfly Doji
-###
-###  $outInteger = TA_CDLDRAGONFLYDOJI($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLENGULFING',
-###    # TA_RetCode TA_CDLENGULFING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLENGULFING(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Engulfing Pattern
-###
-###  $outInteger = TA_CDLENGULFING($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLEVENINGDOJISTAR',
-###    # TA_RetCode TA_CDLEVENINGDOJISTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLEVENINGDOJISTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Evening Doji Star
-###
-###  $outInteger = TA_CDLEVENINGDOJISTAR($open, $high, $low, $close, $InPenetration);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # $InPenetration [Percentage of penetration of a candle within another candle] - real number
-### #     default: 0.3
-### #     valid range: min=0 max=3e+037
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLEVENINGSTAR',
-###    # TA_RetCode TA_CDLEVENINGSTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLEVENINGSTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Evening Star
-###
-###  $outInteger = TA_CDLEVENINGSTAR($open, $high, $low, $close, $InPenetration);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # $InPenetration [Percentage of penetration of a candle within another candle] - real number
-### #     default: 0.3
-### #     valid range: min=0 max=3e+037
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLGAPSIDESIDEWHITE',
-###    # TA_RetCode TA_CDLGAPSIDESIDEWHITE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLGAPSIDESIDEWHITE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Up/Down-gap side-by-side white lines
-###
-###  $outInteger = TA_CDLGAPSIDESIDEWHITE($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLGRAVESTONEDOJI',
-###    # TA_RetCode TA_CDLGRAVESTONEDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLGRAVESTONEDOJI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Gravestone Doji
-###
-###  $outInteger = TA_CDLGRAVESTONEDOJI($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLHAMMER',
-###    # TA_RetCode TA_CDLHAMMER( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLHAMMER(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Hammer
-###
-###  $outInteger = TA_CDLHAMMER($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLHANGINGMAN',
-###    # TA_RetCode TA_CDLHANGINGMAN( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLHANGINGMAN(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Hanging Man
-###
-###  $outInteger = TA_CDLHANGINGMAN($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLHARAMI',
-###    # TA_RetCode TA_CDLHARAMI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLHARAMI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Harami Pattern
-###
-###  $outInteger = TA_CDLHARAMI($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLHARAMICROSS',
-###    # TA_RetCode TA_CDLHARAMI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );CROSS
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLHARAMICROSS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Harami Cross Pattern
-###
-###  $outInteger = TA_CDLHARAMICROSS($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLHIGHWAVE',
-###    # TA_RetCode TA_CDLHIGHWAVE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLHIGHWAVE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###High-Wave Candle
-###
-###  $outInteger = TA_CDLHIGHWAVE($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLHIKKAKE',
-###    # TA_RetCode TA_CDLHIKKAKE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLHIKKAKE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Hikkake Pattern
-###
-###  $outInteger = TA_CDLHIKKAKE($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLHIKKAKEMOD',
-###    # TA_RetCode TA_CDLHIKKAKE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );MOD
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLHIKKAKEMOD(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Modified Hikkake Pattern
-###
-###  $outInteger = TA_CDLHIKKAKEMOD($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLHOMINGPIGEON',
-###    # TA_RetCode TA_CDLHOMINGPIGEON( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLHOMINGPIGEON(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Homing Pigeon
-###
-###  $outInteger = TA_CDLHOMINGPIGEON($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLIDENTICAL3CROWS',
-###    # TA_RetCode TA_CDLIDENTICAL3CROWS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLIDENTICAL3CROWS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Identical Three Crows
-###
-###  $outInteger = TA_CDLIDENTICAL3CROWS($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLINNECK',
-###    # TA_RetCode TA_CDLINNECK( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLINNECK(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###In-Neck Pattern
-###
-###  $outInteger = TA_CDLINNECK($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLINVERTEDHAMMER',
-###    # TA_RetCode TA_CDLINVERTEDHAMMER( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLINVERTEDHAMMER(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Inverted Hammer
-###
-###  $outInteger = TA_CDLINVERTEDHAMMER($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLKICKING',
-###    # TA_RetCode TA_CDLKICKING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLKICKING(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Kicking
-###
-###  $outInteger = TA_CDLKICKING($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLKICKINGBYLENGTH',
-###    # TA_RetCode TA_CDLKICKING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );BYLENGTH
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLKICKINGBYLENGTH(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Kicking - bull/bear determined by the longer marubozu
-###
-###  $outInteger = TA_CDLKICKINGBYLENGTH($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLLADDERBOTTOM',
-###    # TA_RetCode TA_CDLLADDERBOTTOM( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLLADDERBOTTOM(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Ladder Bottom
-###
-###  $outInteger = TA_CDLLADDERBOTTOM($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLLONGLEGGEDDOJI',
-###    # TA_RetCode TA_CDLLONGLEGGEDDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLLONGLEGGEDDOJI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Long Legged Doji
-###
-###  $outInteger = TA_CDLLONGLEGGEDDOJI($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLLONGLINE',
-###    # TA_RetCode TA_CDLLONGLINE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLLONGLINE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Long Line Candle
-###
-###  $outInteger = TA_CDLLONGLINE($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLMARUBOZU',
-###    # TA_RetCode TA_CDLMARUBOZU( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLMARUBOZU(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Marubozu
-###
-###  $outInteger = TA_CDLMARUBOZU($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLMATCHINGLOW',
-###    # TA_RetCode TA_CDLMATCHINGLOW( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLMATCHINGLOW(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Matching Low
-###
-###  $outInteger = TA_CDLMATCHINGLOW($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLMATHOLD',
-###    # TA_RetCode TA_CDLMATHOLD( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLMATHOLD(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Mat Hold
-###
-###  $outInteger = TA_CDLMATHOLD($open, $high, $low, $close, $InPenetration);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # $InPenetration [Percentage of penetration of a candle within another candle] - real number
-### #     default: 0.5
-### #     valid range: min=0 max=3e+037
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLMORNINGDOJISTAR',
-###    # TA_RetCode TA_CDLMORNINGDOJISTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLMORNINGDOJISTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Morning Doji Star
-###
-###  $outInteger = TA_CDLMORNINGDOJISTAR($open, $high, $low, $close, $InPenetration);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # $InPenetration [Percentage of penetration of a candle within another candle] - real number
-### #     default: 0.3
-### #     valid range: min=0 max=3e+037
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLMORNINGSTAR',
-###    # TA_RetCode TA_CDLMORNINGSTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLMORNINGSTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Morning Star
-###
-###  $outInteger = TA_CDLMORNINGSTAR($open, $high, $low, $close, $InPenetration);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # $InPenetration [Percentage of penetration of a candle within another candle] - real number
-### #     default: 0.3
-### #     valid range: min=0 max=3e+037
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLONNECK',
-###    # TA_RetCode TA_CDLONNECK( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLONNECK(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###On-Neck Pattern
-###
-###  $outInteger = TA_CDLONNECK($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLPIERCING',
-###    # TA_RetCode TA_CDLPIERCING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLPIERCING(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Piercing Pattern
-###
-###  $outInteger = TA_CDLPIERCING($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLRICKSHAWMAN',
-###    # TA_RetCode TA_CDLRICKSHAWMAN( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLRICKSHAWMAN(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Rickshaw Man
-###
-###  $outInteger = TA_CDLRICKSHAWMAN($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLRISEFALL3METHODS',
-###    # TA_RetCode TA_CDLRISEFALL3METHODS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLRISEFALL3METHODS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Rising/Falling Three Methods
-###
-###  $outInteger = TA_CDLRISEFALL3METHODS($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLSEPARATINGLINES',
-###    # TA_RetCode TA_CDLSEPARATINGLINES( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLSEPARATINGLINES(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Separating Lines
-###
-###  $outInteger = TA_CDLSEPARATINGLINES($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLSHOOTINGSTAR',
-###    # TA_RetCode TA_CDLSHOOTINGSTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLSHOOTINGSTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Shooting Star
-###
-###  $outInteger = TA_CDLSHOOTINGSTAR($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLSHORTLINE',
-###    # TA_RetCode TA_CDLSHORTLINE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLSHORTLINE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Short Line Candle
-###
-###  $outInteger = TA_CDLSHORTLINE($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLSPINNINGTOP',
-###    # TA_RetCode TA_CDLSPINNINGTOP( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLSPINNINGTOP(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Spinning Top
-###
-###  $outInteger = TA_CDLSPINNINGTOP($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLSTALLEDPATTERN',
-###    # TA_RetCode TA_CDLSTALLEDPATTERN( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLSTALLEDPATTERN(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Stalled Pattern
-###
-###  $outInteger = TA_CDLSTALLEDPATTERN($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLSTICKSANDWICH',
-###    # TA_RetCode TA_CDLSTICKSANDWICH( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLSTICKSANDWICH(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Stick Sandwich
-###
-###  $outInteger = TA_CDLSTICKSANDWICH($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLTAKURI',
-###    # TA_RetCode TA_CDLTAKURI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLTAKURI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Takuri (Dragonfly Doji with very long lower shadow)
-###
-###  $outInteger = TA_CDLTAKURI($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLTASUKIGAP',
-###    # TA_RetCode TA_CDLTASUKIGAP( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLTASUKIGAP(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Tasuki Gap
-###
-###  $outInteger = TA_CDLTASUKIGAP($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLTHRUSTING',
-###    # TA_RetCode TA_CDLTHRUSTING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLTHRUSTING(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Thrusting Pattern
-###
-###  $outInteger = TA_CDLTHRUSTING($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLTRISTAR',
-###    # TA_RetCode TA_CDLTRISTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLTRISTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Tristar Pattern
-###
-###  $outInteger = TA_CDLTRISTAR($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLUNIQUE3RIVER',
-###    # TA_RetCode TA_CDLUNIQUE3RIVER( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLUNIQUE3RIVER(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Unique 3 River
-###
-###  $outInteger = TA_CDLUNIQUE3RIVER($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
-###
-###pp_def('TA_CDLUPSIDEGAP2CROWS',
-###    # TA_RetCode TA_CDLUPSIDEGAP2CROWS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
-###    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
-###    GenericTypes => ['D'],
-###    HandleBad => 1,
-###    Code => q{
-###        int begidx, nbelem, i;
-###        TA_CDLUPSIDEGAP2CROWS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-###    } . _finalize(qw/outInteger/),
-###    Doc => <<'END',
-###Upside Gap Two Crows
-###
-###  $outInteger = TA_CDLUPSIDEGAP2CROWS($open, $high, $low, $close);
-###
-### # $open, $high, $low, $close - 1D piddles, all have to be the same size
-### # returns: $outInteger - 1D piddle
-###END
-###);
+pp_def('TA_CDL2CROWS',
+    # TA_RetCode TA_CDL2CROWS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDL2CROWS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Two Crows
+
+  $outInteger = TA_CDL2CROWS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDL3BLACKCROWS',
+    # TA_RetCode TA_CDL3BLACKCROWS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDL3BLACKCROWS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Three Black Crows
+
+  $outInteger = TA_CDL3BLACKCROWS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDL3INSIDE',
+    # TA_RetCode TA_CDL3INSIDE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDL3INSIDE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Three Inside Up/Down
+
+  $outInteger = TA_CDL3INSIDE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDL3LINESTRIKE',
+    # TA_RetCode TA_CDL3LINESTRIKE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDL3LINESTRIKE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Three-Line Strike
+
+  $outInteger = TA_CDL3LINESTRIKE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDL3OUTSIDE',
+    # TA_RetCode TA_CDL3OUTSIDE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDL3OUTSIDE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Three Outside Up/Down
+
+  $outInteger = TA_CDL3OUTSIDE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDL3STARSINSOUTH',
+    # TA_RetCode TA_CDL3STARSINSOUTH( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDL3STARSINSOUTH(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Three Stars In The South
+
+  $outInteger = TA_CDL3STARSINSOUTH($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDL3WHITESOLDIERS',
+    # TA_RetCode TA_CDL3WHITESOLDIERS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDL3WHITESOLDIERS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Three Advancing White Soldiers
+
+  $outInteger = TA_CDL3WHITESOLDIERS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLABANDONEDBABY',
+    # TA_RetCode TA_CDLABANDONEDBABY( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLABANDONEDBABY(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Abandoned Baby
+
+  $outInteger = TA_CDLABANDONEDBABY($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLADVANCEBLOCK',
+    # TA_RetCode TA_CDLADVANCEBLOCK( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLADVANCEBLOCK(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Advance Block
+
+  $outInteger = TA_CDLADVANCEBLOCK($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLBELTHOLD',
+    # TA_RetCode TA_CDLBELTHOLD( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLBELTHOLD(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Belt-hold
+
+  $outInteger = TA_CDLBELTHOLD($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLBREAKAWAY',
+    # TA_RetCode TA_CDLBREAKAWAY( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLBREAKAWAY(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Breakaway
+
+  $outInteger = TA_CDLBREAKAWAY($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLCLOSINGMARUBOZU',
+    # TA_RetCode TA_CDLCLOSINGMARUBOZU( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLCLOSINGMARUBOZU(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Closing Marubozu
+
+  $outInteger = TA_CDLCLOSINGMARUBOZU($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLCONCEALBABYSWALL',
+    # TA_RetCode TA_CDLCONCEALBABYSWALL( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLCONCEALBABYSWALL(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Concealing Baby Swallow
+
+  $outInteger = TA_CDLCONCEALBABYSWALL($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLCOUNTERATTACK',
+    # TA_RetCode TA_CDLCOUNTERATTACK( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLCOUNTERATTACK(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Counterattack
+
+  $outInteger = TA_CDLCOUNTERATTACK($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLDARKCLOUDCOVER',
+    # TA_RetCode TA_CDLDARKCLOUDCOVER( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLDARKCLOUDCOVER(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Dark Cloud Cover
+
+  $outInteger = TA_CDLDARKCLOUDCOVER($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.5
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLDOJI',
+    # TA_RetCode TA_CDLDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLDOJI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Doji
+
+  $outInteger = TA_CDLDOJI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLDOJISTAR',
+    # TA_RetCode TA_CDLDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );STAR
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLDOJISTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Doji Star
+
+  $outInteger = TA_CDLDOJISTAR($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLDRAGONFLYDOJI',
+    # TA_RetCode TA_CDLDRAGONFLYDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLDRAGONFLYDOJI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Dragonfly Doji
+
+  $outInteger = TA_CDLDRAGONFLYDOJI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLENGULFING',
+    # TA_RetCode TA_CDLENGULFING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLENGULFING(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Engulfing Pattern
+
+  $outInteger = TA_CDLENGULFING($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLEVENINGDOJISTAR',
+    # TA_RetCode TA_CDLEVENINGDOJISTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLEVENINGDOJISTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Evening Doji Star
+
+  $outInteger = TA_CDLEVENINGDOJISTAR($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLEVENINGSTAR',
+    # TA_RetCode TA_CDLEVENINGSTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLEVENINGSTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Evening Star
+
+  $outInteger = TA_CDLEVENINGSTAR($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLGAPSIDESIDEWHITE',
+    # TA_RetCode TA_CDLGAPSIDESIDEWHITE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLGAPSIDESIDEWHITE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Up/Down-gap side-by-side white lines
+
+  $outInteger = TA_CDLGAPSIDESIDEWHITE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLGRAVESTONEDOJI',
+    # TA_RetCode TA_CDLGRAVESTONEDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLGRAVESTONEDOJI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Gravestone Doji
+
+  $outInteger = TA_CDLGRAVESTONEDOJI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLHAMMER',
+    # TA_RetCode TA_CDLHAMMER( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLHAMMER(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Hammer
+
+  $outInteger = TA_CDLHAMMER($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLHANGINGMAN',
+    # TA_RetCode TA_CDLHANGINGMAN( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLHANGINGMAN(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Hanging Man
+
+  $outInteger = TA_CDLHANGINGMAN($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLHARAMI',
+    # TA_RetCode TA_CDLHARAMI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLHARAMI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Harami Pattern
+
+  $outInteger = TA_CDLHARAMI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLHARAMICROSS',
+    # TA_RetCode TA_CDLHARAMI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );CROSS
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLHARAMICROSS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Harami Cross Pattern
+
+  $outInteger = TA_CDLHARAMICROSS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLHIGHWAVE',
+    # TA_RetCode TA_CDLHIGHWAVE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLHIGHWAVE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+High-Wave Candle
+
+  $outInteger = TA_CDLHIGHWAVE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLHIKKAKE',
+    # TA_RetCode TA_CDLHIKKAKE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLHIKKAKE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Hikkake Pattern
+
+  $outInteger = TA_CDLHIKKAKE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLHIKKAKEMOD',
+    # TA_RetCode TA_CDLHIKKAKE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );MOD
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLHIKKAKEMOD(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Modified Hikkake Pattern
+
+  $outInteger = TA_CDLHIKKAKEMOD($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLHOMINGPIGEON',
+    # TA_RetCode TA_CDLHOMINGPIGEON( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLHOMINGPIGEON(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Homing Pigeon
+
+  $outInteger = TA_CDLHOMINGPIGEON($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLIDENTICAL3CROWS',
+    # TA_RetCode TA_CDLIDENTICAL3CROWS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLIDENTICAL3CROWS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Identical Three Crows
+
+  $outInteger = TA_CDLIDENTICAL3CROWS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLINNECK',
+    # TA_RetCode TA_CDLINNECK( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLINNECK(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+In-Neck Pattern
+
+  $outInteger = TA_CDLINNECK($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLINVERTEDHAMMER',
+    # TA_RetCode TA_CDLINVERTEDHAMMER( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLINVERTEDHAMMER(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Inverted Hammer
+
+  $outInteger = TA_CDLINVERTEDHAMMER($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLKICKING',
+    # TA_RetCode TA_CDLKICKING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLKICKING(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Kicking
+
+  $outInteger = TA_CDLKICKING($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLKICKINGBYLENGTH',
+    # TA_RetCode TA_CDLKICKING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );BYLENGTH
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLKICKINGBYLENGTH(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Kicking - bull/bear determined by the longer marubozu
+
+  $outInteger = TA_CDLKICKINGBYLENGTH($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLLADDERBOTTOM',
+    # TA_RetCode TA_CDLLADDERBOTTOM( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLLADDERBOTTOM(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Ladder Bottom
+
+  $outInteger = TA_CDLLADDERBOTTOM($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLLONGLEGGEDDOJI',
+    # TA_RetCode TA_CDLLONGLEGGEDDOJI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLLONGLEGGEDDOJI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Long Legged Doji
+
+  $outInteger = TA_CDLLONGLEGGEDDOJI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLLONGLINE',
+    # TA_RetCode TA_CDLLONGLINE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLLONGLINE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Long Line Candle
+
+  $outInteger = TA_CDLLONGLINE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLMARUBOZU',
+    # TA_RetCode TA_CDLMARUBOZU( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLMARUBOZU(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Marubozu
+
+  $outInteger = TA_CDLMARUBOZU($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLMATCHINGLOW',
+    # TA_RetCode TA_CDLMATCHINGLOW( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLMATCHINGLOW(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Matching Low
+
+  $outInteger = TA_CDLMATCHINGLOW($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLMATHOLD',
+    # TA_RetCode TA_CDLMATHOLD( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLMATHOLD(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Mat Hold
+
+  $outInteger = TA_CDLMATHOLD($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.5
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLMORNINGDOJISTAR',
+    # TA_RetCode TA_CDLMORNINGDOJISTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLMORNINGDOJISTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Morning Doji Star
+
+  $outInteger = TA_CDLMORNINGDOJISTAR($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLMORNINGSTAR',
+    # TA_RetCode TA_CDLMORNINGSTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], double optInPenetration,int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLMORNINGSTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Morning Star
+
+  $outInteger = TA_CDLMORNINGSTAR($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLONNECK',
+    # TA_RetCode TA_CDLONNECK( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLONNECK(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+On-Neck Pattern
+
+  $outInteger = TA_CDLONNECK($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLPIERCING',
+    # TA_RetCode TA_CDLPIERCING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLPIERCING(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Piercing Pattern
+
+  $outInteger = TA_CDLPIERCING($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLRICKSHAWMAN',
+    # TA_RetCode TA_CDLRICKSHAWMAN( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLRICKSHAWMAN(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Rickshaw Man
+
+  $outInteger = TA_CDLRICKSHAWMAN($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLRISEFALL3METHODS',
+    # TA_RetCode TA_CDLRISEFALL3METHODS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLRISEFALL3METHODS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Rising/Falling Three Methods
+
+  $outInteger = TA_CDLRISEFALL3METHODS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLSEPARATINGLINES',
+    # TA_RetCode TA_CDLSEPARATINGLINES( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLSEPARATINGLINES(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Separating Lines
+
+  $outInteger = TA_CDLSEPARATINGLINES($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLSHOOTINGSTAR',
+    # TA_RetCode TA_CDLSHOOTINGSTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLSHOOTINGSTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Shooting Star
+
+  $outInteger = TA_CDLSHOOTINGSTAR($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLSHORTLINE',
+    # TA_RetCode TA_CDLSHORTLINE( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLSHORTLINE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Short Line Candle
+
+  $outInteger = TA_CDLSHORTLINE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLSPINNINGTOP',
+    # TA_RetCode TA_CDLSPINNINGTOP( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLSPINNINGTOP(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Spinning Top
+
+  $outInteger = TA_CDLSPINNINGTOP($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLSTALLEDPATTERN',
+    # TA_RetCode TA_CDLSTALLEDPATTERN( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLSTALLEDPATTERN(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Stalled Pattern
+
+  $outInteger = TA_CDLSTALLEDPATTERN($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLSTICKSANDWICH',
+    # TA_RetCode TA_CDLSTICKSANDWICH( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLSTICKSANDWICH(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Stick Sandwich
+
+  $outInteger = TA_CDLSTICKSANDWICH($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLTAKURI',
+    # TA_RetCode TA_CDLTAKURI( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLTAKURI(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Takuri (Dragonfly Doji with very long lower shadow)
+
+  $outInteger = TA_CDLTAKURI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLTASUKIGAP',
+    # TA_RetCode TA_CDLTASUKIGAP( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLTASUKIGAP(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Tasuki Gap
+
+  $outInteger = TA_CDLTASUKIGAP($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLTHRUSTING',
+    # TA_RetCode TA_CDLTHRUSTING( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLTHRUSTING(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Thrusting Pattern
+
+  $outInteger = TA_CDLTHRUSTING($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLTRISTAR',
+    # TA_RetCode TA_CDLTRISTAR( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLTRISTAR(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Tristar Pattern
+
+  $outInteger = TA_CDLTRISTAR($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLUNIQUE3RIVER',
+    # TA_RetCode TA_CDLUNIQUE3RIVER( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLUNIQUE3RIVER(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Unique 3 River
+
+  $outInteger = TA_CDLUNIQUE3RIVER($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
+
+pp_def('TA_CDLUPSIDEGAP2CROWS',
+    # TA_RetCode TA_CDLUPSIDEGAP2CROWS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
+    Pars => 'double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n);',
+    GenericTypes => ['D'],
+    HandleBad => 1,
+    Code => q{
+        int begidx, nbelem, i;
+        TA_CDLUPSIDEGAP2CROWS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
+    } . _finalize_int(qw/outInteger/),
+    Doc => <<'END',
+Upside Gap Two Crows
+
+  $outInteger = TA_CDLUPSIDEGAP2CROWS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+END
+);
 
 pp_def('TA_CDLXSIDEGAP3METHODS',
     # TA_RetCode TA_CDLXSIDEGAP3METHODS( int startIdx, int endIdx, const double inOpen[], const double inHigh[], const double inLow[], const double inClose[], int *outBegIdx, int *outNBElement, int outInteger[] );
@@ -2649,7 +2661,7 @@ pp_def('TA_CDLXSIDEGAP3METHODS',
     Code => q{
         int begidx, nbelem, i;
         TA_CDLXSIDEGAP3METHODS(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
-    } . _finalize(qw/outInteger/),
+    } . _finalize_int(qw/outInteger/),
     Doc => <<'END',
 Upside/Downside Gap Three Methods
 
@@ -2668,7 +2680,7 @@ pp_def('TA_BETA',
     Code => q{
         int begidx, nbelem, i;
         TA_BETA(0, $SIZE(n)-1, $P(inpdl0), $P(inpdl1), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Beta
 
@@ -2691,7 +2703,7 @@ pp_def('TA_CORREL',
     Code => q{
         int begidx, nbelem, i;
         TA_CORREL(0, $SIZE(n)-1, $P(inpdl0), $P(inpdl1), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Pearson's Correlation Coefficient (r)
 
@@ -2714,7 +2726,7 @@ pp_def('TA_LINEARREG',
     Code => q{
         int begidx, nbelem, i;
         TA_LINEARREG(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Linear Regression
 
@@ -2736,7 +2748,7 @@ pp_def('TA_LINEARREG_ANGLE',
     Code => q{
         int begidx, nbelem, i;
         TA_LINEARREG_ANGLE(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Linear Regression Angle
 
@@ -2758,7 +2770,7 @@ pp_def('TA_LINEARREG_INTERCEPT',
     Code => q{
         int begidx, nbelem, i;
         TA_LINEARREG_INTERCEPT(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Linear Regression Intercept
 
@@ -2780,7 +2792,7 @@ pp_def('TA_LINEARREG_SLOPE',
     Code => q{
         int begidx, nbelem, i;
         TA_LINEARREG_SLOPE(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Linear Regression Slope
 
@@ -2802,7 +2814,7 @@ pp_def('TA_STDDEV',
     Code => q{
         int begidx, nbelem, i;
         TA_STDDEV(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Standard Deviation
 
@@ -2827,7 +2839,7 @@ pp_def('TA_TSF',
     Code => q{
         int begidx, nbelem, i;
         TA_TSF(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Time Series Forecast
 
@@ -2849,7 +2861,7 @@ pp_def('TA_VAR',
     Code => q{
         int begidx, nbelem, i;
         TA_VAR(0, $SIZE(n)-1, $P(inpdl), $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Variance
 
@@ -2874,7 +2886,7 @@ pp_def('TA_AVGPRICE',
     Code => q{
         int begidx, nbelem, i;
         TA_AVGPRICE(0, $SIZE(n)-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Average Price
 
@@ -2893,7 +2905,7 @@ pp_def('TA_MEDPRICE',
     Code => q{
         int begidx, nbelem, i;
         TA_MEDPRICE(0, $SIZE(n)-1, $P(high), $P(low), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Median Price
 
@@ -2912,7 +2924,7 @@ pp_def('TA_TYPPRICE',
     Code => q{
         int begidx, nbelem, i;
         TA_TYPPRICE(0, $SIZE(n)-1, $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Typical Price
 
@@ -2931,7 +2943,7 @@ pp_def('TA_WCLPRICE',
     Code => q{
         int begidx, nbelem, i;
         TA_WCLPRICE(0, $SIZE(n)-1, $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
-    } . _finalize(qw/outpdl/),
+    } . _finalize_double(qw/outpdl/),
     Doc => <<'END',
 Weighted Close Price
 

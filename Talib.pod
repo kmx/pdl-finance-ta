@@ -53,13 +53,9 @@ L<TA_HT_DCPERIOD|/TA_HT_DCPERIOD> (Hilbert Transform - Dominant Cycle Period), L
 
 L<TA_AD|/TA_AD> (Chaikin A/D Line), L<TA_ADOSC|/TA_ADOSC> (Chaikin A/D Oscillator), L<TA_OBV|/TA_OBV> (On Balance Volume)
 
-=begin comment
-
 =head2 Group: Pattern Recognition
 
 L<TA_CDL2CROWS|/TA_CDL2CROWS> (Two Crows), L<TA_CDL3BLACKCROWS|/TA_CDL3BLACKCROWS> (Three Black Crows), L<TA_CDL3INSIDE|/TA_CDL3INSIDE> (Three Inside Up/Down), L<TA_CDL3LINESTRIKE|/TA_CDL3LINESTRIKE> (Three-Line Strike ), L<TA_CDL3OUTSIDE|/TA_CDL3OUTSIDE> (Three Outside Up/Down), L<TA_CDL3STARSINSOUTH|/TA_CDL3STARSINSOUTH> (Three Stars In The South), L<TA_CDL3WHITESOLDIERS|/TA_CDL3WHITESOLDIERS> (Three Advancing White Soldiers), L<TA_CDLABANDONEDBABY|/TA_CDLABANDONEDBABY> (Abandoned Baby), L<TA_CDLADVANCEBLOCK|/TA_CDLADVANCEBLOCK> (Advance Block), L<TA_CDLBELTHOLD|/TA_CDLBELTHOLD> (Belt-hold), L<TA_CDLBREAKAWAY|/TA_CDLBREAKAWAY> (Breakaway), L<TA_CDLCLOSINGMARUBOZU|/TA_CDLCLOSINGMARUBOZU> (Closing Marubozu), L<TA_CDLCONCEALBABYSWALL|/TA_CDLCONCEALBABYSWALL> (Concealing Baby Swallow), L<TA_CDLCOUNTERATTACK|/TA_CDLCOUNTERATTACK> (Counterattack), L<TA_CDLDARKCLOUDCOVER|/TA_CDLDARKCLOUDCOVER> (Dark Cloud Cover), L<TA_CDLDOJI|/TA_CDLDOJI> (Doji), L<TA_CDLDOJISTAR|/TA_CDLDOJISTAR> (Doji Star), L<TA_CDLDRAGONFLYDOJI|/TA_CDLDRAGONFLYDOJI> (Dragonfly Doji), L<TA_CDLENGULFING|/TA_CDLENGULFING> (Engulfing Pattern), L<TA_CDLEVENINGDOJISTAR|/TA_CDLEVENINGDOJISTAR> (Evening Doji Star), L<TA_CDLEVENINGSTAR|/TA_CDLEVENINGSTAR> (Evening Star), L<TA_CDLGAPSIDESIDEWHITE|/TA_CDLGAPSIDESIDEWHITE> (Up/Down-gap side-by-side white lines), L<TA_CDLGRAVESTONEDOJI|/TA_CDLGRAVESTONEDOJI> (Gravestone Doji), L<TA_CDLHAMMER|/TA_CDLHAMMER> (Hammer), L<TA_CDLHANGINGMAN|/TA_CDLHANGINGMAN> (Hanging Man), L<TA_CDLHARAMI|/TA_CDLHARAMI> (Harami Pattern), L<TA_CDLHARAMICROSS|/TA_CDLHARAMICROSS> (Harami Cross Pattern), L<TA_CDLHIGHWAVE|/TA_CDLHIGHWAVE> (High-Wave Candle), L<TA_CDLHIKKAKE|/TA_CDLHIKKAKE> (Hikkake Pattern), L<TA_CDLHIKKAKEMOD|/TA_CDLHIKKAKEMOD> (Modified Hikkake Pattern), L<TA_CDLHOMINGPIGEON|/TA_CDLHOMINGPIGEON> (Homing Pigeon), L<TA_CDLIDENTICAL3CROWS|/TA_CDLIDENTICAL3CROWS> (Identical Three Crows), L<TA_CDLINNECK|/TA_CDLINNECK> (In-Neck Pattern), L<TA_CDLINVERTEDHAMMER|/TA_CDLINVERTEDHAMMER> (Inverted Hammer), L<TA_CDLKICKING|/TA_CDLKICKING> (Kicking), L<TA_CDLKICKINGBYLENGTH|/TA_CDLKICKINGBYLENGTH> (Kicking - bull/bear determined by the longer marubozu), L<TA_CDLLADDERBOTTOM|/TA_CDLLADDERBOTTOM> (Ladder Bottom), L<TA_CDLLONGLEGGEDDOJI|/TA_CDLLONGLEGGEDDOJI> (Long Legged Doji), L<TA_CDLLONGLINE|/TA_CDLLONGLINE> (Long Line Candle), L<TA_CDLMARUBOZU|/TA_CDLMARUBOZU> (Marubozu), L<TA_CDLMATCHINGLOW|/TA_CDLMATCHINGLOW> (Matching Low), L<TA_CDLMATHOLD|/TA_CDLMATHOLD> (Mat Hold), L<TA_CDLMORNINGDOJISTAR|/TA_CDLMORNINGDOJISTAR> (Morning Doji Star), L<TA_CDLMORNINGSTAR|/TA_CDLMORNINGSTAR> (Morning Star), L<TA_CDLONNECK|/TA_CDLONNECK> (On-Neck Pattern), L<TA_CDLPIERCING|/TA_CDLPIERCING> (Piercing Pattern), L<TA_CDLRICKSHAWMAN|/TA_CDLRICKSHAWMAN> (Rickshaw Man), L<TA_CDLRISEFALL3METHODS|/TA_CDLRISEFALL3METHODS> (Rising/Falling Three Methods), L<TA_CDLSEPARATINGLINES|/TA_CDLSEPARATINGLINES> (Separating Lines), L<TA_CDLSHOOTINGSTAR|/TA_CDLSHOOTINGSTAR> (Shooting Star), L<TA_CDLSHORTLINE|/TA_CDLSHORTLINE> (Short Line Candle), L<TA_CDLSPINNINGTOP|/TA_CDLSPINNINGTOP> (Spinning Top), L<TA_CDLSTALLEDPATTERN|/TA_CDLSTALLEDPATTERN> (Stalled Pattern), L<TA_CDLSTICKSANDWICH|/TA_CDLSTICKSANDWICH> (Stick Sandwich), L<TA_CDLTAKURI|/TA_CDLTAKURI> (Takuri (Dragonfly Doji with very long lower shadow)), L<TA_CDLTASUKIGAP|/TA_CDLTASUKIGAP> (Tasuki Gap), L<TA_CDLTHRUSTING|/TA_CDLTHRUSTING> (Thrusting Pattern), L<TA_CDLTRISTAR|/TA_CDLTRISTAR> (Tristar Pattern), L<TA_CDLUNIQUE3RIVER|/TA_CDLUNIQUE3RIVER> (Unique 3 River), L<TA_CDLUPSIDEGAP2CROWS|/TA_CDLUPSIDEGAP2CROWS> (Upside Gap Two Crows), L<TA_CDLXSIDEGAP3METHODS|/TA_CDLXSIDEGAP3METHODS> (Upside/Downside Gap Three Methods)
-
-=end comment
 
 =head2 Group: Statistic Functions
 
@@ -1685,6 +1681,1407 @@ On Balance Volume
 =for bad
 
 TA_OBV processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDL2CROWS
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Two Crows
+
+  $outInteger = TA_CDL2CROWS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDL2CROWS processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDL3BLACKCROWS
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Three Black Crows
+
+  $outInteger = TA_CDL3BLACKCROWS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDL3BLACKCROWS processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDL3INSIDE
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Three Inside Up/Down
+
+  $outInteger = TA_CDL3INSIDE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDL3INSIDE processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDL3LINESTRIKE
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Three-Line Strike
+
+  $outInteger = TA_CDL3LINESTRIKE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDL3LINESTRIKE processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDL3OUTSIDE
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Three Outside Up/Down
+
+  $outInteger = TA_CDL3OUTSIDE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDL3OUTSIDE processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDL3STARSINSOUTH
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Three Stars In The South
+
+  $outInteger = TA_CDL3STARSINSOUTH($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDL3STARSINSOUTH processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDL3WHITESOLDIERS
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Three Advancing White Soldiers
+
+  $outInteger = TA_CDL3WHITESOLDIERS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDL3WHITESOLDIERS processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLABANDONEDBABY
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n))
+
+Abandoned Baby
+
+  $outInteger = TA_CDLABANDONEDBABY($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLABANDONEDBABY processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLADVANCEBLOCK
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Advance Block
+
+  $outInteger = TA_CDLADVANCEBLOCK($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLADVANCEBLOCK processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLBELTHOLD
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Belt-hold
+
+  $outInteger = TA_CDLBELTHOLD($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLBELTHOLD processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLBREAKAWAY
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Breakaway
+
+  $outInteger = TA_CDLBREAKAWAY($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLBREAKAWAY processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLCLOSINGMARUBOZU
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Closing Marubozu
+
+  $outInteger = TA_CDLCLOSINGMARUBOZU($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLCLOSINGMARUBOZU processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLCONCEALBABYSWALL
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Concealing Baby Swallow
+
+  $outInteger = TA_CDLCONCEALBABYSWALL($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLCONCEALBABYSWALL processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLCOUNTERATTACK
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Counterattack
+
+  $outInteger = TA_CDLCOUNTERATTACK($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLCOUNTERATTACK processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLDARKCLOUDCOVER
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n))
+
+Dark Cloud Cover
+
+  $outInteger = TA_CDLDARKCLOUDCOVER($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.5
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLDARKCLOUDCOVER processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLDOJI
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Doji
+
+  $outInteger = TA_CDLDOJI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLDOJI processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLDOJISTAR
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Doji Star
+
+  $outInteger = TA_CDLDOJISTAR($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLDOJISTAR processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLDRAGONFLYDOJI
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Dragonfly Doji
+
+  $outInteger = TA_CDLDRAGONFLYDOJI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLDRAGONFLYDOJI processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLENGULFING
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Engulfing Pattern
+
+  $outInteger = TA_CDLENGULFING($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLENGULFING processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLEVENINGDOJISTAR
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n))
+
+Evening Doji Star
+
+  $outInteger = TA_CDLEVENINGDOJISTAR($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLEVENINGDOJISTAR processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLEVENINGSTAR
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n))
+
+Evening Star
+
+  $outInteger = TA_CDLEVENINGSTAR($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLEVENINGSTAR processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLGAPSIDESIDEWHITE
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Up/Down-gap side-by-side white lines
+
+  $outInteger = TA_CDLGAPSIDESIDEWHITE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLGAPSIDESIDEWHITE processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLGRAVESTONEDOJI
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Gravestone Doji
+
+  $outInteger = TA_CDLGRAVESTONEDOJI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLGRAVESTONEDOJI processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLHAMMER
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Hammer
+
+  $outInteger = TA_CDLHAMMER($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLHAMMER processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLHANGINGMAN
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Hanging Man
+
+  $outInteger = TA_CDLHANGINGMAN($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLHANGINGMAN processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLHARAMI
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Harami Pattern
+
+  $outInteger = TA_CDLHARAMI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLHARAMI processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLHARAMICROSS
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Harami Cross Pattern
+
+  $outInteger = TA_CDLHARAMICROSS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLHARAMICROSS processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLHIGHWAVE
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+High-Wave Candle
+
+  $outInteger = TA_CDLHIGHWAVE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLHIGHWAVE processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLHIKKAKE
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Hikkake Pattern
+
+  $outInteger = TA_CDLHIKKAKE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLHIKKAKE processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLHIKKAKEMOD
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Modified Hikkake Pattern
+
+  $outInteger = TA_CDLHIKKAKEMOD($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLHIKKAKEMOD processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLHOMINGPIGEON
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Homing Pigeon
+
+  $outInteger = TA_CDLHOMINGPIGEON($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLHOMINGPIGEON processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLIDENTICAL3CROWS
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Identical Three Crows
+
+  $outInteger = TA_CDLIDENTICAL3CROWS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLIDENTICAL3CROWS processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLINNECK
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+In-Neck Pattern
+
+  $outInteger = TA_CDLINNECK($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLINNECK processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLINVERTEDHAMMER
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Inverted Hammer
+
+  $outInteger = TA_CDLINVERTEDHAMMER($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLINVERTEDHAMMER processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLKICKING
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Kicking
+
+  $outInteger = TA_CDLKICKING($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLKICKING processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLKICKINGBYLENGTH
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Kicking - bull/bear determined by the longer marubozu
+
+  $outInteger = TA_CDLKICKINGBYLENGTH($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLKICKINGBYLENGTH processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLLADDERBOTTOM
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Ladder Bottom
+
+  $outInteger = TA_CDLLADDERBOTTOM($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLLADDERBOTTOM processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLLONGLEGGEDDOJI
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Long Legged Doji
+
+  $outInteger = TA_CDLLONGLEGGEDDOJI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLLONGLEGGEDDOJI processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLLONGLINE
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Long Line Candle
+
+  $outInteger = TA_CDLLONGLINE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLLONGLINE processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLMARUBOZU
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Marubozu
+
+  $outInteger = TA_CDLMARUBOZU($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLMARUBOZU processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLMATCHINGLOW
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Matching Low
+
+  $outInteger = TA_CDLMATCHINGLOW($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLMATCHINGLOW processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLMATHOLD
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n))
+
+Mat Hold
+
+  $outInteger = TA_CDLMATHOLD($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.5
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLMATHOLD processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLMORNINGDOJISTAR
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n))
+
+Morning Doji Star
+
+  $outInteger = TA_CDLMORNINGDOJISTAR($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLMORNINGDOJISTAR processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLMORNINGSTAR
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); double InPenetration(); int [o]outInteger(n))
+
+Morning Star
+
+  $outInteger = TA_CDLMORNINGSTAR($open, $high, $low, $close, $InPenetration);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # $InPenetration [Percentage of penetration of a candle within another candle] - real number
+ #     default: 0.3
+ #     valid range: min=0 max=3e+037
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLMORNINGSTAR processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLONNECK
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+On-Neck Pattern
+
+  $outInteger = TA_CDLONNECK($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLONNECK processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLPIERCING
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Piercing Pattern
+
+  $outInteger = TA_CDLPIERCING($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLPIERCING processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLRICKSHAWMAN
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Rickshaw Man
+
+  $outInteger = TA_CDLRICKSHAWMAN($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLRICKSHAWMAN processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLRISEFALL3METHODS
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Rising/Falling Three Methods
+
+  $outInteger = TA_CDLRISEFALL3METHODS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLRISEFALL3METHODS processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLSEPARATINGLINES
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Separating Lines
+
+  $outInteger = TA_CDLSEPARATINGLINES($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLSEPARATINGLINES processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLSHOOTINGSTAR
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Shooting Star
+
+  $outInteger = TA_CDLSHOOTINGSTAR($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLSHOOTINGSTAR processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLSHORTLINE
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Short Line Candle
+
+  $outInteger = TA_CDLSHORTLINE($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLSHORTLINE processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLSPINNINGTOP
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Spinning Top
+
+  $outInteger = TA_CDLSPINNINGTOP($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLSPINNINGTOP processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLSTALLEDPATTERN
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Stalled Pattern
+
+  $outInteger = TA_CDLSTALLEDPATTERN($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLSTALLEDPATTERN processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLSTICKSANDWICH
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Stick Sandwich
+
+  $outInteger = TA_CDLSTICKSANDWICH($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLSTICKSANDWICH processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLTAKURI
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Takuri (Dragonfly Doji with very long lower shadow)
+
+  $outInteger = TA_CDLTAKURI($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLTAKURI processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLTASUKIGAP
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Tasuki Gap
+
+  $outInteger = TA_CDLTASUKIGAP($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLTASUKIGAP processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLTHRUSTING
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Thrusting Pattern
+
+  $outInteger = TA_CDLTHRUSTING($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLTHRUSTING processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLTRISTAR
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Tristar Pattern
+
+  $outInteger = TA_CDLTRISTAR($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLTRISTAR processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLUNIQUE3RIVER
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Unique 3 River
+
+  $outInteger = TA_CDLUNIQUE3RIVER($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLUNIQUE3RIVER processes bad values.
+It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
+
+
+
+=cut
+
+=head2 TA_CDLUPSIDEGAP2CROWS
+
+=for sig
+
+  Signature: (double open(n); double high(n); double low(n); double close(n); int [o]outInteger(n))
+
+Upside Gap Two Crows
+
+  $outInteger = TA_CDLUPSIDEGAP2CROWS($open, $high, $low, $close);
+
+ # $open, $high, $low, $close - 1D piddles, all have to be the same size
+ # returns: $outInteger - 1D piddle
+
+
+=for bad
+
+TA_CDLUPSIDEGAP2CROWS processes bad values.
 It will set the bad-value flag of all output piddles if the flag is set for any of the input piddles.
 
 

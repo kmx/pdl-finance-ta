@@ -6,17 +6,6 @@ use PDL::Finance::Talib;
 use Test::More;
 use Test::Number::Delta relative => 1e-9;
 
-use Data::Dumper;
-$Data::Dumper::Terse = 1;
-
-sub pp {
-  my $s = Dumper [shift->list];
-  my $n = shift;
-  $s =~ s/\s+/ /g;
-  $s =~ s/'//g;
-  warn sprintf("  ###\n  my \$%s_expected = %s;\n  delta_ok \$%s, \$%s_expected;\n", $n, $s, $n, $n, $n);
-}
-
 sub pdl2aref {
   my $pdl = shift;
   my @out = ();
@@ -381,11 +370,11 @@ my $optInVFactor = 0.7;                 # [Volume Factor] - real number; valid r
   my $outLeadSine_expected = [ -0.936606121889064, -0.999774271632086, -0.988658073579491, -0.903445649937437, -0.89281454669418, -0.823978287368697, -0.745598314688763, -0.664187541178422, -0.57879536242323, -0.269150816972036, 0.198837183393694, 0.723468952133745, 0.9381328133561, 0.990367428862536, 0.875872984648103, 0.640904686722947, 0.285294965025282, 0.00157695562875339, -0.454799965442866, -0.815546318682707, -0.952016550945869 ] ;
   delta_ok pdl2aref($outLeadSine), $outLeadSine_expected, 'TA_HT_SINE:outLeadSine';
 }
-###{
-###  my $outInteger = TA_HT_TRENDMODE($C4);
-###  my $outInteger_expected = [ 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0 ] ;
-###  delta_ok pdl2aref($outInteger), $outInteger_expected, 'TA_HT_TRENDMODE:outInteger';
-###}
+{
+  my $outInteger = TA_HT_TRENDMODE($C4);
+  my $outInteger_expected = [ 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0 ] ;
+  delta_ok pdl2aref($outInteger), $outInteger_expected, 'TA_HT_TRENDMODE:outInteger';
+}
 {
   my $outReal = TA_AD($H, $L, $C, $V);
   my $outReal_expected = [ 3264471.42857138, 5112280.95238085, 5684935.85434166, 9036879.44408529, 10089275.6189487, 8816619.88124374, 9348573.21457702, 16520873.214577, 10519675.8965693, 12091918.3208116, 14107258.3208116, 13156271.2741795, 10439119.5995384, 8611692.38060356, 5970695.02961013, 8582429.46669627, 6361265.32876522, 3633590.32876522, 6126537.14957454, 5974771.67872254, 7883629.3550711 ] ;
@@ -401,433 +390,310 @@ my $optInVFactor = 0.7;                 # [Volume Factor] - real number; valid r
   my $outReal_expected = [ 3608100, -272300, -4444500, -8616600, -11579500, -7697900, -12257500, -5085200, 7445300, 2998100, -360800, -3184500, 432600, -2565800, -5657200, -2286500, -5475300, -9112200, -5488000, -2411300, 482000 ] ;
   delta_ok pdl2aref($outReal), $outReal_expected, 'TA_OBV:outReal';
 }
-###{
-###  my $outInteger = TA_CDL2CROWS($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDL3BLACKCROWS($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 13, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDL3INSIDE($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDL3LINESTRIKE($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 8, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDL3OUTSIDE($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 3, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDL3STARSINSOUTH($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDL3WHITESOLDIERS($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLABANDONEDBABY($O, $H, $L, $C, $optInPenetration);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLADVANCEBLOCK($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLBELTHOLD($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLBREAKAWAY($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 14, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLCLOSINGMARUBOZU($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLCONCEALBABYSWALL($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 13, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLCOUNTERATTACK($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLDARKCLOUDCOVER($O, $H, $L, $C, $optInPenetration);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLDOJI($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLDOJISTAR($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLDRAGONFLYDOJI($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLENGULFING($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 2, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLEVENINGDOJISTAR($O, $H, $L, $C, $optInPenetration);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLEVENINGSTAR($O, $H, $L, $C, $optInPenetration);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLGAPSIDESIDEWHITE($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 7, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLGRAVESTONEDOJI($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLHAMMER($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLHANGINGMAN($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLHARAMI($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLHARAMICROSS($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLHIGHWAVE($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 1, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLHIKKAKE($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 5, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLHIKKAKEMOD($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLHOMINGPIGEON($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLIDENTICAL3CROWS($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLINNECK($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLINVERTEDHAMMER($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLKICKING($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLKICKINGBYLENGTH($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLLADDERBOTTOM($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 14, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLLONGLEGGEDDOJI($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLLONGLINE($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLMARUBOZU($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLMATCHINGLOW($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 6, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLMATHOLD($O, $H, $L, $C, $optInPenetration);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 14, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLMORNINGDOJISTAR($O, $H, $L, $C, $optInPenetration);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLMORNINGSTAR($O, $H, $L, $C, $optInPenetration);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLONNECK($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLPIERCING($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLRICKSHAWMAN($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLRISEFALL3METHODS($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 14, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLSEPARATINGLINES($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLSHOOTINGSTAR($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLSHORTLINE($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLSPINNINGTOP($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 1, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLSTALLEDPATTERN($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLSTICKSANDWICH($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 7, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLTAKURI($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 10, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLTASUKIGAP($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 7, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLTHRUSTING($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 11, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLTRISTAR($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLUNIQUE3RIVER($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLUPSIDEGAP2CROWS($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 12, 'begIdx');
-###}
-###{
-###  my $outInteger = TA_CDLXSIDEGAP3METHODS($O, $H, $L, $C);
-###  pp $outInteger, "outInteger";
-###  ###
-### # is($retCode, 0, 'retCode');
-### # is($begIdx, 2, 'begIdx');
-###}
+{
+  my $outInteger = TA_CDL2CROWS($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDL3BLACKCROWS($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDL3INSIDE($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDL3LINESTRIKE($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDL3OUTSIDE($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDL3STARSINSOUTH($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDL3WHITESOLDIERS($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLABANDONEDBABY($O, $H, $L, $C, $optInPenetration);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLADVANCEBLOCK($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLBELTHOLD($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLBREAKAWAY($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLCLOSINGMARUBOZU($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLCONCEALBABYSWALL($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLCOUNTERATTACK($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLDARKCLOUDCOVER($O, $H, $L, $C, $optInPenetration);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLDOJI($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 100, 0, 100, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLDOJISTAR($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLDRAGONFLYDOJI($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLENGULFING($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLEVENINGDOJISTAR($O, $H, $L, $C, $optInPenetration);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLEVENINGSTAR($O, $H, $L, $C, $optInPenetration);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLGAPSIDESIDEWHITE($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLGRAVESTONEDOJI($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLHAMMER($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLHANGINGMAN($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, -100, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLHARAMI($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLHARAMICROSS($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLHIGHWAVE($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLHIKKAKE($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLHIKKAKEMOD($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLHOMINGPIGEON($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLIDENTICAL3CROWS($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLINNECK($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLINVERTEDHAMMER($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 100, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLKICKING($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLKICKINGBYLENGTH($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLLADDERBOTTOM($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLLONGLEGGEDDOJI($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 100, 0, 100, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLLONGLINE($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, -100, 0, 0, 100 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLMARUBOZU($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLMATCHINGLOW($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLMATHOLD($O, $H, $L, $C, $optInPenetration);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLMORNINGDOJISTAR($O, $H, $L, $C, $optInPenetration);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLMORNINGSTAR($O, $H, $L, $C, $optInPenetration);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLONNECK($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLPIERCING($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLRICKSHAWMAN($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 100, 0, 100, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLRISEFALL3METHODS($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLSEPARATINGLINES($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLSHOOTINGSTAR($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLSHORTLINE($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLSPINNINGTOP($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 100, 0, -100, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLSTALLEDPATTERN($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLSTICKSANDWICH($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLTAKURI($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLTASUKIGAP($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLTHRUSTING($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLTRISTAR($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLUNIQUE3RIVER($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLUPSIDEGAP2CROWS($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;
+}
+{
+  my $outInteger = TA_CDLXSIDEGAP3METHODS($O, $H, $L, $C);
+  my $outInteger_expected = [ 'BAD', 'BAD', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ;
+  is_deeply [$outInteger->list], $outInteger_expected;}
 {
   my $outReal = TA_BETA($R0, $R1, $optInTimePeriod);
   my $outReal_expected = [ 0.823393259155231, 0.832452072832542, 0.78526807746517, 0.802936945206642, 0.784701325782935, 0.798223028667828, 0.796773834663546, 0.794365265306995, 0.783705690422555, 0.492264254990801, 0.455290504404646 ] ;
