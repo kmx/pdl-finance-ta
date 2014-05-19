@@ -65,6 +65,26 @@ L<TA_BETA|/TA_BETA> (Beta), L<TA_CORREL|/TA_CORREL> (Pearson's Correlation Coeff
 
 L<TA_AVGPRICE|/TA_AVGPRICE> (Average Price), L<TA_MEDPRICE|/TA_MEDPRICE> (Median Price), L<TA_TYPPRICE|/TA_TYPPRICE> (Typical Price), L<TA_WCLPRICE|/TA_WCLPRICE> (Weighted Close Price)
 
+=head1 HANDLING BAD VALUES
+
+Most of the available functions may return BAD values, for example:
+
+  use PDL;
+  use PDL::Finance::Talib;
+  my $PD = pdl([0, 1, 2, 3, 4, 5]);
+  my $MA = TA_MA($PD, 3, 1);
+  print $MA;      # prints: [BAD BAD 1 2 3 4]
+
+All available functions handles BAD values in input piddles (BAD values at the beginning are skipped), for example:
+
+  use PDL;
+  use PDL::Finance::Talib;
+  my $PD = pdl([0, 1, 2, 3, 4, 5]);
+  my $MA1 = TA_MA($PD, 3, 1);
+  say $MA1;      # prints: [BAD BAD 1 2 3 4]
+  my $MA2 = TA_MA($MA1, 3, 1);
+  say $MA2;      # prints: [BAD BAD BAD BAD 2 3]
+
 
 =cut
 
