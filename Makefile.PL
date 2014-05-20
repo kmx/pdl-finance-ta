@@ -46,7 +46,8 @@ WriteMakefile(
   CONFIGURE_REQUIRES => {
         'PDL' => 2.006,
   },
-  dist => { PREOP=> '$(PERL) "-MPDL::PP qw/PDL::Finance::Talib PDL::Finance::Talib Talib/" Talib.pd && perldoc -u Talib.pm > $(DISTVNAME)/Talib.pod' }
+  #dist => { PREOP=> '$(PERL) "-MPDL::PP qw/PDL::Finance::Talib PDL::Finance::Talib Talib/" Talib.pd && perldoc -u Talib.pm > $(DISTVNAME)/Talib.pod' }
+  dist => { PREOP=> '$(PERL) "-MPDL::PP qw/PDL::Finance::Talib PDL::Finance::Talib Talib/" Talib.pd && $(CP) Talib.pm $(DISTVNAME)/TEMPORARY_Talib.pm' }
 );
 
 sub MY::postamble {
