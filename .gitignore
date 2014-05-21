@@ -28,3 +28,4 @@ nytprof.out
 *.old
 Talib.pm
 Talib.xs
+/tmp*

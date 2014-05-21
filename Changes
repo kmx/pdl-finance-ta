@@ -1,0 +1,7 @@
+Changes for PDL::Finance::Talib
+
+0.005   2014/XX/XX
+        - Makefile.PL cosmetics
+
+0.004   2014/05/20
+        - first public release

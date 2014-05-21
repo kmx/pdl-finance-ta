@@ -1,0 +1,16 @@
+### missing TA Lib function
+
+TA_SetUnstablePeriod    TA_GetUnstablePeriod
+TA_SetCompatibility     TA_GetCompatibility
+TA_SetCandleSettings    TA_RestoreCandleDefaultSettings
+
+### BADVAL FIX needed
+
+use Modern::Perl;
+use PDL;
+use PDL::Finance::Talib;
+my $PD = pdl([0, 1, 2, 3, 4, 5]);
+my $MA1 = ta_sma($PD, 3);
+print $MA1;      # prints: [BAD BAD 1 2 3 4]
+my $MA2 = ta_sma($MA1, 3);
+say $MA2;      # prints: [BAD BAD BAD BAD 2 3]
