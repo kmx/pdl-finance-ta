@@ -1,4 +1,7 @@
-our $VERSION = '0.004';
+use strict;
+use warnings;
+our $VERSION = '0.005';
+
 pp_setversion($VERSION);
 
 pp_addpm({At=>'Top'},<<'END');
@@ -153,12 +156,12 @@ pp_def('ta_bbands',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_BBANDS(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDevUp(), $InNbDevDn(), $InMAType(), &begidx, &nbelem, $P(outpdlUpperBand), $P(outpdlMiddleBand), $P(outpdlLowerBand));
+        if (count>0) rc=TA_BBANDS(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDevUp(), $InNbDevDn(), $InMAType(), &begidx, &nbelem, $P(outpdlUpperBand)+first, $P(outpdlMiddleBand)+first, $P(outpdlLowerBand)+first);
     } . _finalize('double', qw/outpdlUpperBand outpdlMiddleBand outpdlLowerBand/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_BBANDS(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDevUp(), $InNbDevDn(), $InMAType(), &begidx, &nbelem, $P(outpdlUpperBand), $P(outpdlMiddleBand), $P(outpdlLowerBand));
+        if (count>0) rc=TA_BBANDS(0, count-1, $P(inpdl), $InTimePeriod(), $InNbDevUp(), $InNbDevDn(), $InMAType(), &begidx, &nbelem, $P(outpdlUpperBand), $P(outpdlMiddleBand), $P(outpdlLowerBand));
     } . _finalize('double', qw/outpdlUpperBand outpdlMiddleBand outpdlLowerBand/),
     Doc => <<'END',
 Bollinger Bands
@@ -193,12 +196,12 @@ pp_def('ta_dema',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_DEMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_DEMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_DEMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_DEMA(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Double Exponential Moving Average
@@ -222,12 +225,12 @@ pp_def('ta_ema',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_EMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_EMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_EMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_EMA(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Exponential Moving Average
@@ -251,12 +254,12 @@ pp_def('ta_ht_trendline',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_HT_TRENDLINE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_HT_TRENDLINE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_HT_TRENDLINE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_HT_TRENDLINE(0, count-1, $P(inpdl), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Hilbert Transform - Instantaneous Trendline
@@ -277,12 +280,12 @@ pp_def('ta_kama',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_KAMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_KAMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_KAMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_KAMA(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Kaufman Adaptive Moving Average
@@ -311,7 +314,7 @@ pp_def('ta_ma',
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MA(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MA(0, count-1, $P(inpdl), $InTimePeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Moving average
@@ -338,12 +341,12 @@ pp_def('ta_mama',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MAMA(0, count-1, $P(inpdl)+first, $InFastLimit(), $InSlowLimit(), &begidx, &nbelem, $P(outMAMA), $P(outFAMA));
+        if (count>0) rc=TA_MAMA(0, count-1, $P(inpdl)+first, $InFastLimit(), $InSlowLimit(), &begidx, &nbelem, $P(outMAMA)+first, $P(outFAMA)+first);
     } . _finalize('double', qw/outMAMA outFAMA/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MAMA(0, count-1, $P(inpdl)+first, $InFastLimit(), $InSlowLimit(), &begidx, &nbelem, $P(outMAMA), $P(outFAMA));
+        if (count>0) rc=TA_MAMA(0, count-1, $P(inpdl), $InFastLimit(), $InSlowLimit(), &begidx, &nbelem, $P(outMAMA), $P(outFAMA));
     } . _finalize('double', qw/outMAMA outFAMA/),
     Doc => <<'END',
 MESA Adaptive Moving Average
@@ -371,12 +374,12 @@ pp_def('ta_mavp',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MAVP(0, count-1, $P(inpdl)+first, $P(inPeriods), $InMinPeriod(), $InMaxPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MAVP(0, count-1, $P(inpdl)+first, $P(inPeriods), $InMinPeriod(), $InMaxPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MAVP(0, count-1, $P(inpdl)+first, $P(inPeriods), $InMinPeriod(), $InMaxPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MAVP(0, count-1, $P(inpdl), $P(inPeriods), $InMinPeriod(), $InMaxPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Moving average with variable period
@@ -407,12 +410,12 @@ pp_def('ta_midpoint',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MIDPOINT(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MIDPOINT(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MIDPOINT(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MIDPOINT(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 MidPoint over period
@@ -436,12 +439,12 @@ pp_def('ta_midprice',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MIDPRICE(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MIDPRICE(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MIDPRICE(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MIDPRICE(0, count-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Midpoint Price over period
@@ -465,12 +468,12 @@ pp_def('ta_sar',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_SAR(0, count-1, $P(high)+first, $P(low)+first, $InAcceleration(), $InMaximum(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_SAR(0, count-1, $P(high)+first, $P(low)+first, $InAcceleration(), $InMaximum(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_SAR(0, count-1, $P(high)+first, $P(low)+first, $InAcceleration(), $InMaximum(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_SAR(0, count-1, $P(high), $P(low), $InAcceleration(), $InMaximum(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Parabolic SAR
@@ -497,12 +500,12 @@ pp_def('ta_sarext',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_SAREXT(0, count-1, $P(high)+first, $P(low)+first, $InStartValue(), $InOffsetOnReverse(), $InAccelerationInitLong(), $InAccelerationLong(), $InAccelerationMaxLong(), $InAccelerationInitShort(), $InAccelerationShort(), $InAccelerationMaxShort(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_SAREXT(0, count-1, $P(high)+first, $P(low)+first, $InStartValue(), $InOffsetOnReverse(), $InAccelerationInitLong(), $InAccelerationLong(), $InAccelerationMaxLong(), $InAccelerationInitShort(), $InAccelerationShort(), $InAccelerationMaxShort(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_SAREXT(0, count-1, $P(high)+first, $P(low)+first, $InStartValue(), $InOffsetOnReverse(), $InAccelerationInitLong(), $InAccelerationLong(), $InAccelerationMaxLong(), $InAccelerationInitShort(), $InAccelerationShort(), $InAccelerationMaxShort(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_SAREXT(0, count-1, $P(high), $P(low), $InStartValue(), $InOffsetOnReverse(), $InAccelerationInitLong(), $InAccelerationLong(), $InAccelerationMaxLong(), $InAccelerationInitShort(), $InAccelerationShort(), $InAccelerationMaxShort(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Parabolic SAR - Extended
@@ -546,13 +549,16 @@ pp_def('ta_sma',
     BadCode => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
+        for(i=0;i<count;i++) warn("XXX isbad[%d]=%d", i, $ISBAD($inpdl(n=>i)));
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_SMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        warn("XXX first=%d count=%d", first, count);
+        if (count>0) rc=TA_SMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first+first);
+        warn("XXX rc=%d begidx=%d nbelem=%d", rc, begidx, nbelem);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_SMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_SMA(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Simple Moving Average
@@ -576,12 +582,12 @@ pp_def('ta_t3',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_T3(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InVFactor(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_T3(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InVFactor(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_T3(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InVFactor(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_T3(0, count-1, $P(inpdl), $InTimePeriod(), $InVFactor(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Triple Exponential Moving Average (T3)
@@ -608,12 +614,12 @@ pp_def('ta_tema',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_TEMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TEMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_TEMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TEMA(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Triple Exponential Moving Average
@@ -637,12 +643,12 @@ pp_def('ta_trima',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_TRIMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TRIMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_TRIMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TRIMA(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Triangular Moving Average
@@ -666,12 +672,12 @@ pp_def('ta_wma',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_WMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_WMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_WMA(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_WMA(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Weighted Moving Average
@@ -695,12 +701,12 @@ pp_def('ta_atr',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ATR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ATR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ATR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ATR(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Average True Range
@@ -724,12 +730,12 @@ pp_def('ta_natr',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_NATR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_NATR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_NATR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_NATR(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Normalized Average True Range
@@ -753,12 +759,12 @@ pp_def('ta_trange',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_TRANGE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TRANGE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_TRANGE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TRANGE(0, count-1, $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 True Range
@@ -779,12 +785,12 @@ pp_def('ta_adx',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ADX(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ADX(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ADX(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ADX(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Average Directional Movement Index
@@ -808,12 +814,12 @@ pp_def('ta_adxr',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ADXR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ADXR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ADXR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ADXR(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Average Directional Movement Index Rating
@@ -837,12 +843,12 @@ pp_def('ta_apo',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_APO(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_APO(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_APO(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_APO(0, count-1, $P(inpdl), $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Absolute Price Oscillator
@@ -872,12 +878,12 @@ pp_def('ta_aroon',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_AROON(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outAroonDown), $P(outAroonUp));
+        if (count>0) rc=TA_AROON(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outAroonDown)+first, $P(outAroonUp)+first);
     } . _finalize('double', qw/outAroonDown outAroonUp/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_AROON(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outAroonDown), $P(outAroonUp));
+        if (count>0) rc=TA_AROON(0, count-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outAroonDown), $P(outAroonUp));
     } . _finalize('double', qw/outAroonDown outAroonUp/),
     Doc => <<'END',
 Aroon
@@ -902,12 +908,12 @@ pp_def('ta_aroonosc',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_AROONOSC(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_AROONOSC(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_AROONOSC(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_AROONOSC(0, count-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Aroon Oscillator
@@ -931,12 +937,12 @@ pp_def('ta_bop',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_BOP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_BOP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_BOP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_BOP(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Balance Of Power
@@ -957,12 +963,12 @@ pp_def('ta_cci',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CCI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_CCI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CCI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_CCI(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Commodity Channel Index
@@ -986,12 +992,12 @@ pp_def('ta_cmo',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CMO(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_CMO(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CMO(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_CMO(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Chande Momentum Oscillator
@@ -1015,12 +1021,12 @@ pp_def('ta_dx',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_DX(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_DX(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_DX(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_DX(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Directional Movement Index
@@ -1044,12 +1050,12 @@ pp_def('ta_macd',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MACD(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InSignalPeriod(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
+        if (count>0) rc=TA_MACD(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InSignalPeriod(), &begidx, &nbelem, $P(outMACD)+first, $P(outMACDSignal)+first, $P(outMACDHist)+first);
     } . _finalize('double', qw/outMACD outMACDSignal outMACDHist/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MACD(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InSignalPeriod(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
+        if (count>0) rc=TA_MACD(0, count-1, $P(inpdl), $InFastPeriod(), $InSlowPeriod(), $InSignalPeriod(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
     } . _finalize('double', qw/outMACD outMACDSignal outMACDHist/),
     Doc => <<'END',
 Moving Average Convergence/Divergence
@@ -1081,12 +1087,12 @@ pp_def('ta_macdext',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MACDEXT(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InFastMAType(), $InSlowPeriod(), $InSlowMAType(), $InSignalPeriod(), $InSignalMAType(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
+        if (count>0) rc=TA_MACDEXT(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InFastMAType(), $InSlowPeriod(), $InSlowMAType(), $InSignalPeriod(), $InSignalMAType(), &begidx, &nbelem, $P(outMACD)+first, $P(outMACDSignal)+first, $P(outMACDHist)+first);
     } . _finalize('double', qw/outMACD outMACDSignal outMACDHist/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MACDEXT(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InFastMAType(), $InSlowPeriod(), $InSlowMAType(), $InSignalPeriod(), $InSignalMAType(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
+        if (count>0) rc=TA_MACDEXT(0, count-1, $P(inpdl), $InFastPeriod(), $InFastMAType(), $InSlowPeriod(), $InSlowMAType(), $InSignalPeriod(), $InSignalMAType(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
     } . _finalize('double', qw/outMACD outMACDSignal outMACDHist/),
     Doc => <<'END',
 MACD with controllable MA type
@@ -1127,12 +1133,12 @@ pp_def('ta_macdfix',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MACDFIX(0, count-1, $P(inpdl)+first, $InSignalPeriod(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
+        if (count>0) rc=TA_MACDFIX(0, count-1, $P(inpdl)+first, $InSignalPeriod(), &begidx, &nbelem, $P(outMACD)+first, $P(outMACDSignal)+first, $P(outMACDHist)+first);
     } . _finalize('double', qw/outMACD outMACDSignal outMACDHist/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MACDFIX(0, count-1, $P(inpdl)+first, $InSignalPeriod(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
+        if (count>0) rc=TA_MACDFIX(0, count-1, $P(inpdl), $InSignalPeriod(), &begidx, &nbelem, $P(outMACD), $P(outMACDSignal), $P(outMACDHist));
     } . _finalize('double', qw/outMACD outMACDSignal outMACDHist/),
     Doc => <<'END',
 Moving Average Convergence/Divergence Fix 12/26
@@ -1158,12 +1164,12 @@ pp_def('ta_mfi',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MFI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MFI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MFI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MFI(0, count-1, $P(high), $P(low), $P(close), $P(volume), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Money Flow Index
@@ -1187,12 +1193,12 @@ pp_def('ta_minus_di',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MINUS_DI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MINUS_DI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MINUS_DI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MINUS_DI(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Minus Directional Indicator
@@ -1216,12 +1222,12 @@ pp_def('ta_minus_dm',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MINUS_DM(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MINUS_DM(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MINUS_DM(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MINUS_DM(0, count-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Minus Directional Movement
@@ -1245,12 +1251,12 @@ pp_def('ta_mom',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MOM(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MOM(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MOM(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MOM(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Momentum
@@ -1274,12 +1280,12 @@ pp_def('ta_plus_di',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_PLUS_DI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_PLUS_DI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_PLUS_DI(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_PLUS_DI(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Plus Directional Indicator
@@ -1303,12 +1309,12 @@ pp_def('ta_plus_dm',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_PLUS_DM(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_PLUS_DM(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_PLUS_DM(0, count-1, $P(high)+first, $P(low)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_PLUS_DM(0, count-1, $P(high), $P(low), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Plus Directional Movement
@@ -1332,12 +1338,12 @@ pp_def('ta_ppo',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_PPO(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_PPO(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_PPO(0, count-1, $P(inpdl)+first, $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_PPO(0, count-1, $P(inpdl), $InFastPeriod(), $InSlowPeriod(), $InMAType(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Percentage Price Oscillator
@@ -1367,12 +1373,12 @@ pp_def('ta_roc',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ROC(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ROC(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ROC(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ROC(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Rate of change : ((price/prevPrice-1)*100)
@@ -1396,12 +1402,12 @@ pp_def('ta_rocp',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ROCP(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ROCP(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ROCP(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ROCP(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Rate of change Percentage: (price-prevPrice/prevPrice)
@@ -1425,12 +1431,12 @@ pp_def('ta_rocr',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ROCR(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ROCR(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ROCR(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ROCR(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Rate of change ratio: (price/prevPrice)
@@ -1454,12 +1460,12 @@ pp_def('ta_rocr100',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ROCR100(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ROCR100(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ROCR100(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ROCR100(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Rate of change ratio 100 scale: (price/prevPrice*100)
@@ -1483,12 +1489,12 @@ pp_def('ta_rsi',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_RSI(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_RSI(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_RSI(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_RSI(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Relative Strength Index
@@ -1512,12 +1518,12 @@ pp_def('ta_stoch',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_STOCH(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InFastK_Period(), $InSlowK_Period(), $InSlowK_MAType(), $InSlowD_Period(), $InSlowD_MAType(), &begidx, &nbelem, $P(outSlowK), $P(outSlowD));
+        if (count>0) rc=TA_STOCH(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InFastK_Period(), $InSlowK_Period(), $InSlowK_MAType(), $InSlowD_Period(), $InSlowD_MAType(), &begidx, &nbelem, $P(outSlowK)+first, $P(outSlowD)+first);
     } . _finalize('double', qw/outSlowK outSlowD/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_STOCH(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InFastK_Period(), $InSlowK_Period(), $InSlowK_MAType(), $InSlowD_Period(), $InSlowD_MAType(), &begidx, &nbelem, $P(outSlowK), $P(outSlowD));
+        if (count>0) rc=TA_STOCH(0, count-1, $P(high), $P(low), $P(close), $InFastK_Period(), $InSlowK_Period(), $InSlowK_MAType(), $InSlowD_Period(), $InSlowD_MAType(), &begidx, &nbelem, $P(outSlowK), $P(outSlowD));
     } . _finalize('double', qw/outSlowK outSlowD/),
     Doc => <<'END',
 Stochastic
@@ -1554,12 +1560,12 @@ pp_def('ta_stochf',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_STOCHF(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK), $P(outFastD));
+        if (count>0) rc=TA_STOCHF(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK)+first, $P(outFastD)+first);
     } . _finalize('double', qw/outFastK outFastD/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_STOCHF(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK), $P(outFastD));
+        if (count>0) rc=TA_STOCHF(0, count-1, $P(high), $P(low), $P(close), $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK), $P(outFastD));
     } . _finalize('double', qw/outFastK outFastD/),
     Doc => <<'END',
 Stochastic Fast
@@ -1590,12 +1596,12 @@ pp_def('ta_stochrsi',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_STOCHRSI(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK), $P(outFastD));
+        if (count>0) rc=TA_STOCHRSI(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK)+first, $P(outFastD)+first);
     } . _finalize('double', qw/outFastK outFastD/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_STOCHRSI(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK), $P(outFastD));
+        if (count>0) rc=TA_STOCHRSI(0, count-1, $P(inpdl), $InTimePeriod(), $InFastK_Period(), $InFastD_Period(), $InFastD_MAType(), &begidx, &nbelem, $P(outFastK), $P(outFastD));
     } . _finalize('double', qw/outFastK outFastD/),
     Doc => <<'END',
 Stochastic Relative Strength Index
@@ -1629,12 +1635,12 @@ pp_def('ta_trix',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_TRIX(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TRIX(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_TRIX(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TRIX(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 1-day Rate-Of-Change (ROC of a Triple Smooth EMA)
@@ -1658,12 +1664,12 @@ pp_def('ta_ultosc',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ULTOSC(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod1(), $InTimePeriod2(), $InTimePeriod3(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ULTOSC(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod1(), $InTimePeriod2(), $InTimePeriod3(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ULTOSC(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod1(), $InTimePeriod2(), $InTimePeriod3(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ULTOSC(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod1(), $InTimePeriod2(), $InTimePeriod3(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Ultimate Oscillator
@@ -1693,12 +1699,12 @@ pp_def('ta_willr',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_WILLR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_WILLR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_WILLR(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_WILLR(0, count-1, $P(high), $P(low), $P(close), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Williams' %R
@@ -1722,12 +1728,12 @@ pp_def('ta_ht_dcperiod',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_HT_DCPERIOD(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_HT_DCPERIOD(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_HT_DCPERIOD(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_HT_DCPERIOD(0, count-1, $P(inpdl), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Hilbert Transform - Dominant Cycle Period
@@ -1748,12 +1754,12 @@ pp_def('ta_ht_dcphase',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_HT_DCPHASE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_HT_DCPHASE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_HT_DCPHASE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_HT_DCPHASE(0, count-1, $P(inpdl), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Hilbert Transform - Dominant Cycle Phase
@@ -1774,12 +1780,12 @@ pp_def('ta_ht_phasor',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_HT_PHASOR(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outInPhase), $P(outQuadrature));
+        if (count>0) rc=TA_HT_PHASOR(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outInPhase)+first, $P(outQuadrature)+first);
     } . _finalize('double', qw/outInPhase outQuadrature/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_HT_PHASOR(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outInPhase), $P(outQuadrature));
+        if (count>0) rc=TA_HT_PHASOR(0, count-1, $P(inpdl), &begidx, &nbelem, $P(outInPhase), $P(outQuadrature));
     } . _finalize('double', qw/outInPhase outQuadrature/),
     Doc => <<'END',
 Hilbert Transform - Phasor Components
@@ -1801,12 +1807,12 @@ pp_def('ta_ht_sine',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_HT_SINE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outSine), $P(outLeadSine));
+        if (count>0) rc=TA_HT_SINE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outSine)+first, $P(outLeadSine)+first);
     } . _finalize('double', qw/outSine outLeadSine/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_HT_SINE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outSine), $P(outLeadSine));
+        if (count>0) rc=TA_HT_SINE(0, count-1, $P(inpdl), &begidx, &nbelem, $P(outSine), $P(outLeadSine));
     } . _finalize('double', qw/outSine outLeadSine/),
     Doc => <<'END',
 Hilbert Transform - SineWave
@@ -1828,12 +1834,12 @@ pp_def('ta_ht_trendmode',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_HT_TRENDMODE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_HT_TRENDMODE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_HT_TRENDMODE(0, count-1, $P(inpdl)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_HT_TRENDMODE(0, count-1, $P(inpdl), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Hilbert Transform - Trend vs Cycle Mode
@@ -1854,12 +1860,12 @@ pp_def('ta_ad',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_AD(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_AD(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_AD(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_AD(0, count-1, $P(high), $P(low), $P(close), $P(volume), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Chaikin A/D Line
@@ -1880,12 +1886,12 @@ pp_def('ta_adosc',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_ADOSC(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, $InFastPeriod(), $InSlowPeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ADOSC(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, $InFastPeriod(), $InSlowPeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_ADOSC(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, $P(volume)+first, $InFastPeriod(), $InSlowPeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_ADOSC(0, count-1, $P(high), $P(low), $P(close), $P(volume), $InFastPeriod(), $InSlowPeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Chaikin A/D Oscillator
@@ -1912,12 +1918,12 @@ pp_def('ta_obv',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_OBV(0, count-1, $P(inpdl)+first, $P(volume)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_OBV(0, count-1, $P(inpdl)+first, $P(volume)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_OBV(0, count-1, $P(inpdl)+first, $P(volume)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_OBV(0, count-1, $P(inpdl), $P(volume), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 On Balance Volume
@@ -1939,12 +1945,12 @@ pp_def('ta_cdl2crows',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDL2CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL2CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDL2CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL2CROWS(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Two Crows
@@ -1966,12 +1972,12 @@ pp_def('ta_cdl3blackcrows',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDL3BLACKCROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3BLACKCROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDL3BLACKCROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3BLACKCROWS(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Three Black Crows
@@ -1992,12 +1998,12 @@ pp_def('ta_cdl3inside',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDL3INSIDE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3INSIDE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDL3INSIDE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3INSIDE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Three Inside Up/Down
@@ -2018,12 +2024,12 @@ pp_def('ta_cdl3linestrike',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDL3LINESTRIKE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3LINESTRIKE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDL3LINESTRIKE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3LINESTRIKE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Three-Line Strike
@@ -2044,12 +2050,12 @@ pp_def('ta_cdl3outside',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDL3OUTSIDE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3OUTSIDE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDL3OUTSIDE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3OUTSIDE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Three Outside Up/Down
@@ -2070,12 +2076,12 @@ pp_def('ta_cdl3starsinsouth',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDL3STARSINSOUTH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3STARSINSOUTH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDL3STARSINSOUTH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3STARSINSOUTH(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Three Stars In The South
@@ -2096,12 +2102,12 @@ pp_def('ta_cdl3whitesoldiers',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDL3WHITESOLDIERS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3WHITESOLDIERS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDL3WHITESOLDIERS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDL3WHITESOLDIERS(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Three Advancing White Soldiers
@@ -2122,12 +2128,12 @@ pp_def('ta_cdlabandonedbaby',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLABANDONEDBABY(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLABANDONEDBABY(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLABANDONEDBABY(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLABANDONEDBABY(0, count-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Abandoned Baby
@@ -2151,12 +2157,12 @@ pp_def('ta_cdladvanceblock',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLADVANCEBLOCK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLADVANCEBLOCK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLADVANCEBLOCK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLADVANCEBLOCK(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Advance Block
@@ -2177,12 +2183,12 @@ pp_def('ta_cdlbelthold',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLBELTHOLD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLBELTHOLD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLBELTHOLD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLBELTHOLD(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Belt-hold
@@ -2203,12 +2209,12 @@ pp_def('ta_cdlbreakaway',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLBREAKAWAY(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLBREAKAWAY(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLBREAKAWAY(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLBREAKAWAY(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Breakaway
@@ -2229,12 +2235,12 @@ pp_def('ta_cdlclosingmarubozu',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLCLOSINGMARUBOZU(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLCLOSINGMARUBOZU(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLCLOSINGMARUBOZU(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLCLOSINGMARUBOZU(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Closing Marubozu
@@ -2255,12 +2261,12 @@ pp_def('ta_cdlconcealbabyswall',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLCONCEALBABYSWALL(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLCONCEALBABYSWALL(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLCONCEALBABYSWALL(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLCONCEALBABYSWALL(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Concealing Baby Swallow
@@ -2281,12 +2287,12 @@ pp_def('ta_cdlcounterattack',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLCOUNTERATTACK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLCOUNTERATTACK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLCOUNTERATTACK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLCOUNTERATTACK(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Counterattack
@@ -2307,12 +2313,12 @@ pp_def('ta_cdldarkcloudcover',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLDARKCLOUDCOVER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLDARKCLOUDCOVER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLDARKCLOUDCOVER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLDARKCLOUDCOVER(0, count-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Dark Cloud Cover
@@ -2336,12 +2342,12 @@ pp_def('ta_cdldoji',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLDOJI(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Doji
@@ -2362,12 +2368,12 @@ pp_def('ta_cdldojistar',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLDOJISTAR(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Doji Star
@@ -2388,12 +2394,12 @@ pp_def('ta_cdldragonflydoji',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLDRAGONFLYDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLDRAGONFLYDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLDRAGONFLYDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLDRAGONFLYDOJI(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Dragonfly Doji
@@ -2414,12 +2420,12 @@ pp_def('ta_cdlengulfing',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLENGULFING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLENGULFING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLENGULFING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLENGULFING(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Engulfing Pattern
@@ -2440,12 +2446,12 @@ pp_def('ta_cdleveningdojistar',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLEVENINGDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLEVENINGDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLEVENINGDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLEVENINGDOJISTAR(0, count-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Evening Doji Star
@@ -2469,12 +2475,12 @@ pp_def('ta_cdleveningstar',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLEVENINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLEVENINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLEVENINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLEVENINGSTAR(0, count-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Evening Star
@@ -2498,12 +2504,12 @@ pp_def('ta_cdlgapsidesidewhite',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLGAPSIDESIDEWHITE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLGAPSIDESIDEWHITE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLGAPSIDESIDEWHITE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLGAPSIDESIDEWHITE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Up/Down-gap side-by-side white lines
@@ -2524,12 +2530,12 @@ pp_def('ta_cdlgravestonedoji',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLGRAVESTONEDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLGRAVESTONEDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLGRAVESTONEDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLGRAVESTONEDOJI(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Gravestone Doji
@@ -2550,12 +2556,12 @@ pp_def('ta_cdlhammer',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLHAMMER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHAMMER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLHAMMER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHAMMER(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Hammer
@@ -2576,12 +2582,12 @@ pp_def('ta_cdlhangingman',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLHANGINGMAN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHANGINGMAN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLHANGINGMAN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHANGINGMAN(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Hanging Man
@@ -2602,12 +2608,12 @@ pp_def('ta_cdlharami',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLHARAMI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHARAMI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLHARAMI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHARAMI(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Harami Pattern
@@ -2628,12 +2634,12 @@ pp_def('ta_cdlharamicross',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLHARAMICROSS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHARAMICROSS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLHARAMICROSS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHARAMICROSS(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Harami Cross Pattern
@@ -2654,12 +2660,12 @@ pp_def('ta_cdlhighwave',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLHIGHWAVE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHIGHWAVE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLHIGHWAVE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHIGHWAVE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 High-Wave Candle
@@ -2680,12 +2686,12 @@ pp_def('ta_cdlhikkake',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLHIKKAKE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHIKKAKE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLHIKKAKE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHIKKAKE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Hikkake Pattern
@@ -2706,12 +2712,12 @@ pp_def('ta_cdlhikkakemod',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLHIKKAKEMOD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHIKKAKEMOD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLHIKKAKEMOD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHIKKAKEMOD(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Modified Hikkake Pattern
@@ -2732,12 +2738,12 @@ pp_def('ta_cdlhomingpigeon',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLHOMINGPIGEON(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHOMINGPIGEON(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLHOMINGPIGEON(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLHOMINGPIGEON(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Homing Pigeon
@@ -2758,12 +2764,12 @@ pp_def('ta_cdlidentical3crows',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLIDENTICAL3CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLIDENTICAL3CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLIDENTICAL3CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLIDENTICAL3CROWS(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Identical Three Crows
@@ -2784,12 +2790,12 @@ pp_def('ta_cdlinneck',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLINNECK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLINNECK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLINNECK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLINNECK(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 In-Neck Pattern
@@ -2810,12 +2816,12 @@ pp_def('ta_cdlinvertedhammer',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLINVERTEDHAMMER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLINVERTEDHAMMER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLINVERTEDHAMMER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLINVERTEDHAMMER(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Inverted Hammer
@@ -2836,12 +2842,12 @@ pp_def('ta_cdlkicking',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLKICKING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLKICKING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLKICKING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLKICKING(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Kicking
@@ -2862,12 +2868,12 @@ pp_def('ta_cdlkickingbylength',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLKICKINGBYLENGTH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLKICKINGBYLENGTH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLKICKINGBYLENGTH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLKICKINGBYLENGTH(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Kicking - bull/bear determined by the longer marubozu
@@ -2888,12 +2894,12 @@ pp_def('ta_cdlladderbottom',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLLADDERBOTTOM(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLLADDERBOTTOM(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLLADDERBOTTOM(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLLADDERBOTTOM(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Ladder Bottom
@@ -2914,12 +2920,12 @@ pp_def('ta_cdllongleggeddoji',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLLONGLEGGEDDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLLONGLEGGEDDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLLONGLEGGEDDOJI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLLONGLEGGEDDOJI(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Long Legged Doji
@@ -2940,12 +2946,12 @@ pp_def('ta_cdllongline',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLLONGLINE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLLONGLINE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLLONGLINE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLLONGLINE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Long Line Candle
@@ -2966,12 +2972,12 @@ pp_def('ta_cdlmarubozu',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLMARUBOZU(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMARUBOZU(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLMARUBOZU(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMARUBOZU(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Marubozu
@@ -2992,12 +2998,12 @@ pp_def('ta_cdlmatchinglow',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLMATCHINGLOW(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMATCHINGLOW(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLMATCHINGLOW(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMATCHINGLOW(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Matching Low
@@ -3018,12 +3024,12 @@ pp_def('ta_cdlmathold',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLMATHOLD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMATHOLD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLMATHOLD(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMATHOLD(0, count-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Mat Hold
@@ -3047,12 +3053,12 @@ pp_def('ta_cdlmorningdojistar',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLMORNINGDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMORNINGDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLMORNINGDOJISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMORNINGDOJISTAR(0, count-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Morning Doji Star
@@ -3076,12 +3082,12 @@ pp_def('ta_cdlmorningstar',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLMORNINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMORNINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLMORNINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, $InPenetration(), &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLMORNINGSTAR(0, count-1, $P(open), $P(high), $P(low), $P(close), $InPenetration(), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Morning Star
@@ -3105,12 +3111,12 @@ pp_def('ta_cdlonneck',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLONNECK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLONNECK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLONNECK(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLONNECK(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 On-Neck Pattern
@@ -3131,12 +3137,12 @@ pp_def('ta_cdlpiercing',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLPIERCING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLPIERCING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLPIERCING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLPIERCING(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Piercing Pattern
@@ -3157,12 +3163,12 @@ pp_def('ta_cdlrickshawman',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLRICKSHAWMAN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLRICKSHAWMAN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLRICKSHAWMAN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLRICKSHAWMAN(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Rickshaw Man
@@ -3183,12 +3189,12 @@ pp_def('ta_cdlrisefall3methods',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLRISEFALL3METHODS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLRISEFALL3METHODS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLRISEFALL3METHODS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLRISEFALL3METHODS(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Rising/Falling Three Methods
@@ -3209,12 +3215,12 @@ pp_def('ta_cdlseparatinglines',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLSEPARATINGLINES(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSEPARATINGLINES(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLSEPARATINGLINES(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSEPARATINGLINES(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Separating Lines
@@ -3235,12 +3241,12 @@ pp_def('ta_cdlshootingstar',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLSHOOTINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSHOOTINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLSHOOTINGSTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSHOOTINGSTAR(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Shooting Star
@@ -3261,12 +3267,12 @@ pp_def('ta_cdlshortline',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLSHORTLINE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSHORTLINE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLSHORTLINE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSHORTLINE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Short Line Candle
@@ -3287,12 +3293,12 @@ pp_def('ta_cdlspinningtop',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLSPINNINGTOP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSPINNINGTOP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLSPINNINGTOP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSPINNINGTOP(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Spinning Top
@@ -3313,12 +3319,12 @@ pp_def('ta_cdlstalledpattern',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLSTALLEDPATTERN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSTALLEDPATTERN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLSTALLEDPATTERN(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSTALLEDPATTERN(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Stalled Pattern
@@ -3339,12 +3345,12 @@ pp_def('ta_cdlsticksandwich',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLSTICKSANDWICH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSTICKSANDWICH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLSTICKSANDWICH(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLSTICKSANDWICH(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Stick Sandwich
@@ -3365,12 +3371,12 @@ pp_def('ta_cdltakuri',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLTAKURI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLTAKURI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLTAKURI(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLTAKURI(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Takuri (Dragonfly Doji with very long lower shadow)
@@ -3391,12 +3397,12 @@ pp_def('ta_cdltasukigap',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLTASUKIGAP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLTASUKIGAP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLTASUKIGAP(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLTASUKIGAP(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Tasuki Gap
@@ -3417,12 +3423,12 @@ pp_def('ta_cdlthrusting',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLTHRUSTING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLTHRUSTING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLTHRUSTING(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLTHRUSTING(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Thrusting Pattern
@@ -3443,12 +3449,12 @@ pp_def('ta_cdltristar',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLTRISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLTRISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLTRISTAR(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLTRISTAR(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Tristar Pattern
@@ -3469,12 +3475,12 @@ pp_def('ta_cdlunique3river',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLUNIQUE3RIVER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLUNIQUE3RIVER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLUNIQUE3RIVER(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLUNIQUE3RIVER(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Unique 3 River
@@ -3495,12 +3501,12 @@ pp_def('ta_cdlupsidegap2crows',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLUPSIDEGAP2CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLUPSIDEGAP2CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLUPSIDEGAP2CROWS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLUPSIDEGAP2CROWS(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Upside Gap Two Crows
@@ -3521,12 +3527,12 @@ pp_def('ta_cdlxsidegap3methods',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CDLXSIDEGAP3METHODS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLXSIDEGAP3METHODS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger)+first);
     } . _finalize('int', qw/outInteger/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_CDLXSIDEGAP3METHODS(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outInteger));
+        if (count>0) rc=TA_CDLXSIDEGAP3METHODS(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outInteger));
     } . _finalize('int', qw/outInteger/),
     Doc => <<'END',
 Upside/Downside Gap Three Methods
@@ -3547,7 +3553,7 @@ pp_def('ta_beta',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl0(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_BETA(0, count-1, $P(inpdl0), $P(inpdl1), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_BETA(0, count-1, $P(inpdl0), $P(inpdl1), $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
@@ -3577,7 +3583,7 @@ pp_def('ta_correl',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl0(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_CORREL(0, count-1, $P(inpdl0), $P(inpdl1), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_CORREL(0, count-1, $P(inpdl0), $P(inpdl1), $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
@@ -3607,12 +3613,12 @@ pp_def('ta_linearreg',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_LINEARREG(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_LINEARREG(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_LINEARREG(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_LINEARREG(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Linear Regression
@@ -3636,12 +3642,12 @@ pp_def('ta_linearreg_angle',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_LINEARREG_ANGLE(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_LINEARREG_ANGLE(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_LINEARREG_ANGLE(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_LINEARREG_ANGLE(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Linear Regression Angle
@@ -3665,12 +3671,12 @@ pp_def('ta_linearreg_intercept',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_LINEARREG_INTERCEPT(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_LINEARREG_INTERCEPT(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_LINEARREG_INTERCEPT(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_LINEARREG_INTERCEPT(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Linear Regression Intercept
@@ -3694,12 +3700,12 @@ pp_def('ta_linearreg_slope',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_LINEARREG_SLOPE(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_LINEARREG_SLOPE(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_LINEARREG_SLOPE(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_LINEARREG_SLOPE(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Linear Regression Slope
@@ -3723,12 +3729,12 @@ pp_def('ta_stddev',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_STDDEV(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_STDDEV(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_STDDEV(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_STDDEV(0, count-1, $P(inpdl), $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Standard Deviation
@@ -3755,12 +3761,12 @@ pp_def('ta_tsf',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_TSF(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TSF(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_TSF(0, count-1, $P(inpdl)+first, $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TSF(0, count-1, $P(inpdl), $InTimePeriod(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Time Series Forecast
@@ -3784,12 +3790,12 @@ pp_def('ta_var',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($inpdl(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_VAR(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_VAR(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_VAR(0, count-1, $P(inpdl)+first, $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_VAR(0, count-1, $P(inpdl), $InTimePeriod(), $InNbDev(), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Variance
@@ -3816,12 +3822,12 @@ pp_def('ta_avgprice',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_AVGPRICE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_AVGPRICE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_AVGPRICE(0, count-1, $P(open)+first, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_AVGPRICE(0, count-1, $P(open), $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Average Price
@@ -3842,12 +3848,12 @@ pp_def('ta_medprice',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_MEDPRICE(0, count-1, $P(high)+first, $P(low)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MEDPRICE(0, count-1, $P(high)+first, $P(low)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_MEDPRICE(0, count-1, $P(high)+first, $P(low)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_MEDPRICE(0, count-1, $P(high), $P(low), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Median Price
@@ -3868,12 +3874,12 @@ pp_def('ta_typprice',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_TYPPRICE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TYPPRICE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_TYPPRICE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_TYPPRICE(0, count-1, $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Typical Price
@@ -3894,12 +3900,12 @@ pp_def('ta_wclprice',
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
         while($ISBAD($high(n=>first)) && count>0) { first++; count--; }
-        if (count>0) rc=TA_WCLPRICE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_WCLPRICE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl)+first);
     } . _finalize('double', qw/outpdl/),
     Code => q{
         TA_RetCode rc=0;
         int begidx, nbelem, i, first=0, count=$SIZE(n);
-        if (count>0) rc=TA_WCLPRICE(0, count-1, $P(high)+first, $P(low)+first, $P(close)+first, &begidx, &nbelem, $P(outpdl));
+        if (count>0) rc=TA_WCLPRICE(0, count-1, $P(high), $P(low), $P(close), &begidx, &nbelem, $P(outpdl));
     } . _finalize('double', qw/outpdl/),
     Doc => <<'END',
 Weighted Close Price
