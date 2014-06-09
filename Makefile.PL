@@ -51,7 +51,12 @@ WriteMakefile(
           repository   => 'https://github.com/kmx/pdl-finance-talib',
       },
   },
-  dist => { PREOP=> 'cd $(DISTVNAME) && $(PERL) "-MPDL::PP qw/PDL::Finance::Talib PDL::Finance::Talib TEMPORARY_Talib/" Talib.pd && $(RM_F) TEMPORARY_*.xs && pod2text TEMPORARY_Talib.pm > README' },
+  dist => {
+      PREOP => '$(MKPATH) $(DISTVNAME)/GENERATED'
+               . ' && $(PERL) "-MPDL::PP qw[PDL::Finance::Talib PDL::Finance::Talib $(DISTVNAME)/GENERATED/Talib]" Talib.pd'
+               . ' && $(RM_F) $(DISTVNAME)/GENERATED/*.xs'
+               . ' && pod2text $(DISTVNAME)/GENERATED/Talib.pm > README'
+      },
 );
 
 sub MY::postamble {

@@ -1,5 +1,8 @@
 Changes for PDL::Finance::Talib
 
+0.006   2014/06/09
+        - Makefile.PL cosmetics
+
 0.005   2014/05/21
         - BAD val handling bug
         - Makefile.PL cosmetics
