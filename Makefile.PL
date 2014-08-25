@@ -2,10 +2,12 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 use PDL::Core::Dev;
+use Alien::TALib;
  
 # ta-lib detection taken from Finance::TA
 
-my $libs = $ENV{TALIB_LIBS};
+my $alien = Alien::TALib->new;
+my $libs = $ENV{TALIB_LIBS} || $alien->libs;
 if (!defined $libs) {
   $libs = `ta-lib-config --libs`;
   $libs =~ s/[\s\n\r]*$//;
@@ -13,7 +15,7 @@ if (!defined $libs) {
   $libs .= " -lta_lib" if $libs && $libs !~ /-lta_lib/;
 }
 
-my $cflags = $ENV{TALIB_CFLAGS};
+my $cflags = $ENV{TALIB_CFLAGS} || $alien->cflags;
 if (!defined $cflags) {
  $cflags = `ta-lib-config --cflags`;
  $cflags =~ s/[\s\n\r]*$//;
@@ -37,14 +39,17 @@ WriteMakefile(
   LICENSE       => 'perl',
   PREREQ_PM     => {
         'PDL' => 2.006,
+        'Alien::TALib' => 0.05,
   },
   BUILD_REQUIRES     => {
         'PDL' => 2.006,
         'Test::More' => 0,
         'Test::Number::Delta' => 0,
+        'Alien::TALib' => 0.05,
   },
   CONFIGURE_REQUIRES => {
         'PDL' => 2.006,
+        'Alien::TALib' => 0.05,
   },
   META_MERGE   => { 
       resources    => {
