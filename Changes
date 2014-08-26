@@ -1,5 +1,8 @@
 Changes for PDL::Finance::Talib
 
+0.007   2014/XX/XX
+        - use Alien::TALib for ta-lib detection
+
 0.006   2014/06/09
         - Makefile.PL cosmetics
 

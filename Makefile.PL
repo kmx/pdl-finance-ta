@@ -2,29 +2,40 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 use PDL::Core::Dev;
-use Alien::TALib;
- 
-# ta-lib detection taken from Finance::TA
 
-my $alien = Alien::TALib->new;
-my $libs = $ENV{TALIB_LIBS} || $alien->libs;
-if (!defined $libs) {
-  $libs = `ta-lib-config --libs`;
-  $libs =~ s/[\s\n\r]*$//;
-  #XXX-HACK fixing broken ta-lib-config output
-  $libs .= " -lta_lib" if $libs && $libs !~ /-lta_lib/;
+my $libs = $ENV{TALIB_LIBS};
+my $cflags = $ENV{TALIB_CFLAGS};
+
+eval { require Alien::TALib };
+if ( !$@ ) {
+  warn "Using ta-lib via Alien::TALib\n";
+  my $alien = Alien::TALib->new;
+  $libs   = $alien->libs   if !defined $libs;
+  $cflags = $alien->cflags if !defined $cflags;
 }
+else {
+  warn "Alien::TALib not found, trying ta-lib-config\n";
+  if (!defined $libs) {
+    $libs = `ta-lib-config --libs`;
+    $libs =~ s/[\s\n\r]*$//;
+    #XXX-HACK fixing broken ta-lib-config output
+    $libs .= " -lta_lib" if $libs && $libs !~ /-lta_lib/;
+  }
 
-my $cflags = $ENV{TALIB_CFLAGS} || $alien->cflags;
-if (!defined $cflags) {
- $cflags = `ta-lib-config --cflags`;
- $cflags =~ s/[\s\n\r]*$//;
+  if (!defined $cflags) {
+   $cflags = `ta-lib-config --cflags`;
+   $cflags =~ s/[\s\n\r]*$//;
+  }
 }
 
 unless ($libs) {
   warn "\nERROR: ta-lib not found on your system!\n\n";
   exit 0;
 }
+
+warn "Gonna use\n",
+     " cflags: '$cflags'\n",
+     " libs:   '$libs'\n";
 
 my $package = [qw/Talib.pd Talib PDL::Finance::Talib/];
 my %eumm_args = pdlpp_stdargs($package);
@@ -51,7 +62,7 @@ WriteMakefile(
         'PDL' => 2.006,
         'Alien::TALib' => 0.05,
   },
-  META_MERGE   => { 
+  META_MERGE   => {
       resources    => {
           repository   => 'https://github.com/kmx/pdl-finance-talib',
       },
