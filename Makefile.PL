@@ -50,17 +50,17 @@ WriteMakefile(
   LICENSE       => 'perl',
   PREREQ_PM     => {
         'PDL' => 2.006,
-        'Alien::TALib' => 0.05,
+        'Alien::TALib' => 0.06,
   },
   BUILD_REQUIRES     => {
         'PDL' => 2.006,
         'Test::More' => 0,
         'Test::Number::Delta' => 0,
-        'Alien::TALib' => 0.05,
+        'Alien::TALib' => 0.06,
   },
   CONFIGURE_REQUIRES => {
         'PDL' => 2.006,
-        'Alien::TALib' => 0.05,
+        'Alien::TALib' => 0.06,
   },
   META_MERGE   => {
       resources    => {
@@ -68,6 +68,7 @@ WriteMakefile(
       },
   },
   dist => {
+      ($^O eq 'MSWin32' ? (TAR => 'ptar', TARFLAGS => '-c -C -f') : ()),
       PREOP => '$(MKPATH) $(DISTVNAME)/GENERATED'
                . ' && $(PERL) "-MPDL::PP qw[PDL::Finance::Talib PDL::Finance::Talib $(DISTVNAME)/GENERATED/Talib]" Talib.pd'
                . ' && $(RM_F) $(DISTVNAME)/GENERATED/*.xs'

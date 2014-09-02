@@ -13,6 +13,7 @@ Build.bat
 /META.yml
 /META.json
 /MYMETA.*
+/README
 nytprof.out
 /pm_to_blib
 *.c
@@ -25,6 +26,7 @@ nytprof.out
 *.gz
 *.zip
 *.tar
+*.gz
 *.old
 Talib.pm
 Talib.xs
