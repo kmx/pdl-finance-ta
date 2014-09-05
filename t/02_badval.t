@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 use PDL;
-use PDL::Finance::Talib;
+use PDL::Finance::TA;
 use Test::More;
 
 my $T  = pdl([0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30]);

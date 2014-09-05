@@ -1,5 +1,5 @@
 use Test::More;
 
-use_ok('PDL::Finance::Talib');
+use_ok('PDL::Finance::TA');
 
 done_testing();

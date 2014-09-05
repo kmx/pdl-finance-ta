@@ -37,14 +37,14 @@ warn "Gonna use\n",
      " cflags: '$cflags'\n",
      " libs:   '$libs'\n";
 
-my $package = [qw/Talib.pd Talib PDL::Finance::Talib/];
+my $package = [qw/TA.pd TA PDL::Finance::TA/];
 my %eumm_args = pdlpp_stdargs($package);
 $eumm_args{INC} .= " $cflags";
 push @{$eumm_args{LIBS}}, $libs;
 
 WriteMakefile(
   %eumm_args,
-  VERSION_FROM  => 'Talib.pd',
+  VERSION_FROM  => 'TA.pd',
   AUTHOR        => 'KMX <kmx@cpan.org>',
   ABSTRACT      => 'PDL interface to ta-lib library',
   LICENSE       => 'perl',
@@ -64,15 +64,15 @@ WriteMakefile(
   },
   META_MERGE   => {
       resources    => {
-          repository   => 'https://github.com/kmx/pdl-finance-talib',
+          repository   => 'https://github.com/kmx/pdl-finance-ta',
       },
   },
   dist => {
       ($^O eq 'MSWin32' ? (TAR => 'ptar', TARFLAGS => '-c -C -f') : ()),
       PREOP => '$(MKPATH) $(DISTVNAME)/GENERATED'
-               . ' && $(PERL) "-MPDL::PP qw[PDL::Finance::Talib PDL::Finance::Talib $(DISTVNAME)/GENERATED/Talib]" Talib.pd'
+               . ' && $(PERL) "-MPDL::PP qw[PDL::Finance::TA PDL::Finance::TA $(DISTVNAME)/GENERATED/TA]" TA.pd'
                . ' && $(RM_F) $(DISTVNAME)/GENERATED/*.xs'
-               . ' && pod2text $(DISTVNAME)/GENERATED/Talib.pm > README'
+               . ' && pod2text $(DISTVNAME)/GENERATED/TA.pm > README'
       },
 );
 
@@ -80,7 +80,7 @@ sub MY::postamble {
         pdlpp_postamble($package) . <<'END'
 
 mypod:
-	$(PERL) "-MPDL::PP qw/PDL::Finance::Talib PDL::Finance::Talib TMP/" Talib.pd
+	$(PERL) "-MPDL::PP qw/PDL::Finance::TA PDL::Finance::TA TMP/" TA.pd
 	perldoc -u TMP.pm > README.pod
 	$(RM_F) TMP.pm TMP.xs
 

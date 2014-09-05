@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 use PDL;
-use PDL::Finance::Talib;
+use PDL::Finance::TA;
 use Test::More;
 use Test::Number::Delta relative => 1e-9;
 

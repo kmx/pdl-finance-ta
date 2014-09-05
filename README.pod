@@ -1,11 +1,11 @@
 =head1 NAME
 
-PDL::Finance::Talib - Technical Analysis Library (http://ta-lib.org) bindings for PDL
+PDL::Finance::TA - Technical Analysis Library (http://ta-lib.org) bindings for PDL
 
 =head1 SYNOPSIS
 
  use PDL;
- use PDL::Finance::Talib;
+ use PDL::Finance::TA;
 
  # first load market data you want to analyze
  my $open   = ... ; # 1D piddle
@@ -70,7 +70,7 @@ L<ta_avgprice|/ta_avgprice> (Average Price), L<ta_medprice|/ta_medprice> (Median
 Most of the available functions may return BAD values, for example:
 
   use PDL;
-  use PDL::Finance::Talib;
+  use PDL::Finance::TA;
   my $PD = pdl([0, 1, 2, 3, 4, 5]);
   my $MA = ta_ma($PD, 3, 1);
   print $MA;      # prints: [BAD BAD 1 2 3 4]
@@ -78,7 +78,7 @@ Most of the available functions may return BAD values, for example:
 All available functions handles BAD values in input piddles (BAD values at the beginning are skipped), for example:
 
   use PDL;
-  use PDL::Finance::Talib;
+  use PDL::Finance::TA;
   my $PD = pdl([0, 1, 2, 3, 4, 5]);
   my $MA1 = ta_ma($PD, 3, 1);
   say $MA1;      # prints: [BAD BAD 1 2 3 4]

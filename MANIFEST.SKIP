@@ -32,6 +32,6 @@ poznamky*
 \.c$
 ^PDL-*
 Makefile$
-Talib\.pm$
-Talib\.xs$
+TA\.pm$
+TA\.xs$
 README\.pod$

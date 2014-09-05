@@ -28,6 +28,6 @@ nytprof.out
 *.tar
 *.gz
 *.old
-Talib.pm
-Talib.xs
+TA.pm
+TA.xs
 /tmp*
