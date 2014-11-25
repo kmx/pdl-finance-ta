@@ -72,14 +72,15 @@ WriteMakefile(
       PREOP => '$(MKPATH) $(DISTVNAME)/GENERATED'
                . ' && $(PERL) "-MPDL::PP qw[PDL::Finance::TA PDL::Finance::TA $(DISTVNAME)/GENERATED/TA]" TA.pd'
                . ' && $(RM_F) $(DISTVNAME)/GENERATED/*.xs'
-               . ' && pod2text $(DISTVNAME)/GENERATED/TA.pm > README'
+               . ' && perldoc -u $(DISTVNAME)/GENERATED/TA.pm | pod2markdown > README.md'
+               #. ' && pod2text $(DISTVNAME)/GENERATED/TA.pm > README'
       },
 );
 
 sub MY::postamble {
         pdlpp_postamble($package) . <<'END'
 
-readme:
+README.md:
 	$(PERL) "-MPDL::PP qw/PDL::Finance::TA PDL::Finance::TA TMP/" TA.pd
 	perldoc -u TMP.pm | pod2markdown > README.md
 	$(RM_F) TMP.pm TMP.xs
