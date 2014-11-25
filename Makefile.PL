@@ -55,7 +55,7 @@ WriteMakefile(
   BUILD_REQUIRES     => {
         'PDL' => 2.006,
         'Test::More' => 0,
-        'Test::Number::Delta' => 0,
+        'Test::Number::Delta' => '1.06',
         'Alien::TALib' => 0.06,
   },
   CONFIGURE_REQUIRES => {
