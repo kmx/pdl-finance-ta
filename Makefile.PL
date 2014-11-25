@@ -79,9 +79,9 @@ WriteMakefile(
 sub MY::postamble {
         pdlpp_postamble($package) . <<'END'
 
-mypod:
+readme:
 	$(PERL) "-MPDL::PP qw/PDL::Finance::TA PDL::Finance::TA TMP/" TA.pd
-	perldoc -u TMP.pm > README.pod
+	perldoc -u TMP.pm | pod2markdown > README.md
 	$(RM_F) TMP.pm TMP.xs
 
 END
