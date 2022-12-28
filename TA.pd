@@ -105,6 +105,11 @@ END
 
 pp_addhdr << 'MARKER';
 #include <ta_libc.h>
+
+/* Remove #define's for close and open symbols from XSUB.h */
+#undef close
+#undef open
+
 MARKER
 
 sub _finalize { # XXX-TODO this is not nice
